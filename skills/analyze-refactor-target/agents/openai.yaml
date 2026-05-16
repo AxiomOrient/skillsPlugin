@@ -1,6 +1,0 @@
-interface:
-  display_name: "[analyze] 리팩터링 대상 선정"
-  short_description: "어디를 고치면 효과가 큰지, 얼마나 작게 나눌지 먼저 고릅니다."
-  default_prompt: "$analyze-refactor-target 스킬로 어디를 고치면 효과가 큰지, 얼마나 작게 나눌지 먼저 고릅니다."
-policy:
-  allow_implicit_invocation: true

@@ -1,4 +1,0 @@
-interface:
-  display_name: "[xbmcp] 실행"
-  short_description: "빌드한 앱을 시뮬레이터에서 실행합니다."
-  default_prompt: "$xbmcp-run 스킬로 앱을 빌드하고 시뮬레이터에서 실행합니다."

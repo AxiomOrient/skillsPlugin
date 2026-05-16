@@ -1,4 +1,0 @@
-interface:
-  display_name: "[xbmcp] 찾기"
-  short_description: "프로젝트, 스킴, 시뮬레이터를 찾습니다."
-  default_prompt: "$xbmcp-find 스킬로 빌드 전에 프로젝트와 스킴을 확인합니다."

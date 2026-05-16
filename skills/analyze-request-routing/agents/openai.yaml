@@ -1,6 +1,0 @@
-interface:
-  display_name: "[analyze] 요청 라우팅"
-  short_description: "요청이 분석, 계획, 구현, 리뷰, 검증 중 어디로 가야 하는지 고릅니다."
-  default_prompt: "$analyze-request-routing 스킬로 요청이 분석, 계획, 구현, 리뷰, 검증 중 어디로 가야 하는지 고릅니다."
-policy:
-  allow_implicit_invocation: true

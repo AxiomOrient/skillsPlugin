@@ -1,6 +1,0 @@
-interface:
-  display_name: "[execute] UX/UI 개선 실행"
-  short_description: "수락된 UX/UI 개선안을 코드와 화면에 작게 적용합니다."
-  default_prompt: "$execute-ux-ui-improvement 스킬로 수락된 UX/UI 개선안을 코드와 화면에 작게 적용합니다."
-policy:
-  allow_implicit_invocation: true

@@ -1,6 +1,0 @@
-interface:
-  display_name: "[analyze] 원인 분석"
-  short_description: "재현된 문제를 관찰하고 가장 작은 원인 사슬을 찾습니다."
-  default_prompt: "$analyze-root-cause 스킬로 재현된 문제를 관찰하고 가장 작은 원인 사슬을 찾습니다."
-policy:
-  allow_implicit_invocation: true

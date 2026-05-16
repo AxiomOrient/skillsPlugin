@@ -1,6 +1,0 @@
-interface:
-  display_name: "[author] 작업 명세 작성"
-  short_description: "구현자가 바로 쓸 수 있는 요구사항, 범위, 검증 기준 문서를 씁니다."
-  default_prompt: "$author-work-spec 스킬로 구현자가 바로 쓸 수 있는 요구사항, 범위, 검증 기준 문서를 씁니다."
-policy:
-  allow_implicit_invocation: true

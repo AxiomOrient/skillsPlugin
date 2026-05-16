@@ -1,6 +1,0 @@
-interface:
-  display_name: "[simplify] 코드 단순화"
-  short_description: "동작은 그대로 두고 중복, 약한 래퍼, 불필요한 복잡도를 줄입니다."
-  default_prompt: "$simplify 스킬로 동작은 그대로 두고 중복, 약한 래퍼, 불필요한 복잡도를 줄입니다."
-policy:
-  allow_implicit_invocation: true

@@ -1,6 +1,0 @@
-interface:
-  display_name: "[qa] Python 리팩터링 검증"
-  short_description: "Python 리팩터링이 동작을 유지했고 과하게 쪼개지 않았는지 확인합니다."
-  default_prompt: "$qa-refactor-python 스킬로 Python 리팩터링이 동작을 유지했고 과하게 쪼개지 않았는지 확인합니다."
-policy:
-  allow_implicit_invocation: true

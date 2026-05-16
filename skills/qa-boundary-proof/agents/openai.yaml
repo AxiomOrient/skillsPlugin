@@ -1,6 +1,0 @@
-interface:
-  display_name: "[qa] 경계 규칙 검증"
-  short_description: "레이어, 공개 표면, 저장소 규칙이 깨지지 않았는지 검증합니다."
-  default_prompt: "$qa-boundary-proof 스킬로 레이어, 공개 표면, 저장소 규칙이 깨지지 않았는지 검증합니다."
-policy:
-  allow_implicit_invocation: true

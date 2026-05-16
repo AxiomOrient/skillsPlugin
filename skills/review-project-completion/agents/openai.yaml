@@ -1,6 +1,0 @@
-interface:
-  display_name: "[review] 완료 상태 리뷰"
-  short_description: "목표, 코드, 테스트, 문서를 대조해 완료 여부를 판단합니다."
-  default_prompt: "$review-project-completion 스킬로 목표, 코드, 테스트, 문서를 대조해 완료 여부를 판단합니다."
-policy:
-  allow_implicit_invocation: true

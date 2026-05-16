@@ -1,6 +1,0 @@
-interface:
-  display_name: "[analyze] UX/UI 개선 분석"
-  short_description: "화면과 흐름을 근거로 UX/UI 개선 규칙과 우선순위를 찾습니다."
-  default_prompt: "$analyze-ux-ui-improvement 스킬로 화면과 흐름을 근거로 UX/UI 개선 규칙과 우선순위를 찾습니다."
-policy:
-  allow_implicit_invocation: true

@@ -1,6 +1,0 @@
-interface:
-  display_name: "[meta] 핵심 UX 리팩터링 조율"
-  short_description: "핵심 흐름 단순화 작업을 분석, 실행, 검증 스킬로 연결합니다."
-  default_prompt: "$orchestrate-essential-ux-refactor 스킬로 핵심 흐름 단순화 작업을 분석, 실행, 검증 스킬로 연결합니다."
-policy:
-  allow_implicit_invocation: true

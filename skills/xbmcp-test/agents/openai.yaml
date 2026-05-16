@@ -1,4 +1,0 @@
-interface:
-  display_name: "[xbmcp] 테스트"
-  short_description: "iOS 시뮬레이터에서 테스트를 실행합니다."
-  default_prompt: "$xbmcp-test 스킬로 iOS 시뮬레이터 테스트를 실행합니다."

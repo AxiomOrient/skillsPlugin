@@ -1,6 +1,0 @@
-interface:
-  display_name: "[analyze] 테스트 보장 분석"
-  short_description: "테스트가 실제 사용자 동작을 지키는지, 구현 세부만 보는지 판단합니다."
-  default_prompt: "$analyze-test-contract 스킬로 테스트가 실제 사용자 동작을 지키는지, 구현 세부만 보는지 판단합니다."
-policy:
-  allow_implicit_invocation: true
