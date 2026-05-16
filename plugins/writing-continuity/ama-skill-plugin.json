@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.akasha.writing-continuity",
+  "name": "Akasha Writing Continuity",
+  "version": "0.1.0",
+  "description": "Mobile-safe Akasha skills for first drafts and handoff summaries.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/writing-continuity",
+  "skills": [
+    {
+      "path": "skills/akasha-brief-to-draft",
+      "selected": true
+    },
+    {
+      "path": "skills/akasha-summarize",
+      "selected": true
+    }
+  ]
+}

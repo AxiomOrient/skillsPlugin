@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.akasha.safety-trust",
+  "name": "Akasha Safety Trust",
+  "version": "0.1.0",
+  "description": "Mobile-safe Akasha skills for security checklist and gate judgment.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/safety-trust",
+  "skills": [
+    {
+      "path": "skills/akasha-security-checklist",
+      "selected": true
+    },
+    {
+      "path": "skills/akasha-gate-judgment",
+      "selected": true
+    }
+  ]
+}

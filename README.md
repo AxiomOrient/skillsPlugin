@@ -1,6 +1,6 @@
 # AMA Skills Plugin Guide
 
-This repository is the authoring guide for AMA mobile skill plugins. It does not contain production skills yet.
+This repository contains AMA mobile skill plugin guidance and the first Akasha-to-AMA native skill packs.
 
 The previous copied Codex/development-process skills were removed because AMA is a mobile agent. AMA skills must be designed around iOS storage, WebKit execution, native host intents, artifact handling, and explicit plugin install/uninstall boundaries.
 
@@ -22,6 +22,7 @@ The previous copied Codex/development-process skills were removed because AMA is
 ## Documents
 
 - [AMA project analysis](docs/ama-project-analysis.md)
+- [Akasha AMA compatibility](docs/akasha-ama-compatibility.md)
 - [Rulebook](docs/rulebook.md)
 - [Plugin pack structure](docs/plugin-pack-structure.md)
 - [Skill authoring guide](docs/skill-authoring-guide.md)
@@ -32,6 +33,15 @@ The previous copied Codex/development-process skills were removed because AMA is
 
 ## Current State
 
-There are no installable production skills in this repository right now. The next valid change is to add category-owned AMA plugin packs under `plugins/<category>/`, each with its own `ama-skill-plugin.json` and mobile-specific skills.
+Installable Akasha packs now live under `plugins/<category>/`. Each pack has its own `ama-skill-plugin.json` and can be installed or removed as one category.
 
 The install unit must be the plugin category, not the entire repository.
+
+## Installable Packs
+
+- `plugins/intake-routing`: scope lock, first route lock, request route.
+- `plugins/safety-trust`: security checklist, gate judgment.
+- `plugins/writing-continuity`: brief-to-draft, summarize.
+- `plugins/engineering-control`: patch shape.
+
+These skills do not ship Python, shell, PowerShell, batch, or Node scripts. They call AMA native Swift host intents such as `akasha.scope_lock` through `run_intent`.

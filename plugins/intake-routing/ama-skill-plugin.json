@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.akasha.intake-routing",
+  "name": "Akasha Intake Routing",
+  "version": "0.1.0",
+  "description": "Mobile-safe Akasha skills for scope locking and request routing.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/intake-routing",
+  "skills": [
+    {
+      "path": "skills/akasha-scope-lock",
+      "selected": true
+    },
+    {
+      "path": "skills/akasha-route-lock",
+      "selected": true
+    },
+    {
+      "path": "skills/akasha-request-router",
+      "selected": true
+    }
+  ]
+}

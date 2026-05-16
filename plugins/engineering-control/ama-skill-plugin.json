@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.akasha.engineering-control",
+  "name": "Akasha Engineering Control",
+  "version": "0.1.0",
+  "description": "Mobile-safe Akasha skill for shaping bounded implementation patches.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/engineering-control",
+  "skills": [
+    {
+      "path": "skills/akasha-patch-shape",
+      "selected": true
+    }
+  ]
+}
