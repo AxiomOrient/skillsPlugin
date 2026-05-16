@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Build Constraints"
+  short_description: "빌드 전 제품 제약 게이트 판정"
+  default_prompt: "Use $analyze-build-constraints to decide whether this product idea should be built and save the one-page Markdown verdict."

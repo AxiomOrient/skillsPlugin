@@ -1,0 +1,96 @@
+{
+  "excluded": [
+    {
+      "name": "analyze-repo-brownfield",
+      "path": "analyze-repo-brownfield",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/extract_snapshot.py",
+        "scripts/repo_inventory.py"
+      ]
+    },
+    {
+      "name": "clean",
+      "path": "clean",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/cleanup_inventory.sh"
+      ]
+    },
+    {
+      "name": "compare-ui-screenshots",
+      "path": "compare-ui-screenshots",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/validate_verdict.py"
+      ]
+    },
+    {
+      "name": "crap-test-hardening",
+      "path": "crap-test-hardening",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "tests/test_crap_score.py",
+        "scripts/crap_score.py",
+        "scripts/__pycache__/crap_score.cpython-312.pyc"
+      ]
+    },
+    {
+      "name": "doctor",
+      "path": "doctor",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/doctor.py"
+      ]
+    },
+    {
+      "name": "execute-docs-renewal",
+      "path": "execute-docs-renewal",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/docs_inventory.py",
+        "scripts/check_docs_renewal_qa.py",
+        "scripts/check_docs_truth.py"
+      ]
+    },
+    {
+      "name": "execute-project-stabilization",
+      "path": "execute-project-stabilization",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/project_inventory.py"
+      ]
+    },
+    {
+      "name": "html-image-scene-builder",
+      "path": "html-image-scene-builder",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/generate_html_scene.py",
+        "scripts/audit_assets.py",
+        "scripts/build_scene_manifest.py",
+        "scripts/generate_swiftui_scene.py",
+        "scripts/scene_common.py",
+        "scripts/check_scene_render.py",
+        "scripts/generate_compose_scene.py",
+        "scripts/transparentize_png.py"
+      ]
+    },
+    {
+      "name": "qa-change-scenarios",
+      "path": "qa-change-scenarios",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/check_change_qa.py"
+      ]
+    },
+    {
+      "name": "wiki",
+      "path": "wiki",
+      "reason": "contains script or executable helper files",
+      "files": [
+        "scripts/wiki.py"
+      ]
+    }
+  ]
+}

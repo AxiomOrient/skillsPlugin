@@ -1,0 +1,4 @@
+interface:
+  display_name: "[xbmcp] 데몬"
+  short_description: "데몬 상태와 로그를 확인합니다."
+  default_prompt: "$xbmcp-daemon 스킬로 XcodeBuildMCP 데몬 상태와 로그를 확인합니다."

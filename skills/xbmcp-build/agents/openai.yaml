@@ -1,0 +1,4 @@
+interface:
+  display_name: "[xbmcp] 빌드"
+  short_description: "iOS 시뮬레이터용으로 빌드합니다."
+  default_prompt: "$xbmcp-build 스킬로 iOS 앱이 시뮬레이터에서 빌드되는지 확인합니다."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goal Refactor Swift"
+  short_description: "Run goal-guided Swift refactor loops without overengineering"
+  default_prompt: "Use /goal to refactor this Swift project iteratively. Keep each slice behavior-preserving, verify after every pass, and stop before stylistic churn."

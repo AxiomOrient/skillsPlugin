@@ -1,0 +1,6 @@
+interface:
+  display_name: "Root Cause Prevention"
+  short_description: "Fix root causes and add durable guards."
+  default_prompt: "Use $resolve-root-cause-prevent-recurrence to trace the failure, fix the durable cause, verify it, and add a recurrence guard."
+policy:
+  allow_implicit_invocation: true

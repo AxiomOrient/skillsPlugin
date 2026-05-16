@@ -1,0 +1,6 @@
+interface:
+  display_name: "[review] 품질 리뷰"
+  short_description: "정해진 범위의 유지보수성, 테스트, 위험을 체크리스트로 봅니다."
+  default_prompt: "$review-quality-check 스킬로 정해진 범위의 유지보수성, 테스트, 위험을 체크리스트로 봅니다."
+policy:
+  allow_implicit_invocation: true

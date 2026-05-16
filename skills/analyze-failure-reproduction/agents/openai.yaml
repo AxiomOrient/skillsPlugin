@@ -1,0 +1,6 @@
+interface:
+  display_name: "[analyze] 재현 절차 만들기"
+  short_description: "흐릿한 버그 제보를 다시 실행할 수 있는 실패 절차로 바꿉니다."
+  default_prompt: "$analyze-failure-reproduction 스킬로 흐릿한 버그 제보를 다시 실행할 수 있는 실패 절차로 바꿉니다."
+policy:
+  allow_implicit_invocation: true

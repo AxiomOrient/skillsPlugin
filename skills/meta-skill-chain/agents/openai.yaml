@@ -1,0 +1,6 @@
+interface:
+  display_name: "[meta] 스킬 체인 구성"
+  short_description: "여러 스킬이 필요한 일을 순서와 넘길 값을 드러내어 묶습니다."
+  default_prompt: "$meta-skill-chain 스킬로 여러 스킬이 필요한 일을 순서와 넘길 값을 드러내어 묶습니다."
+policy:
+  allow_implicit_invocation: true

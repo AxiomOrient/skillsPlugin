@@ -1,0 +1,6 @@
+interface:
+  display_name: "[review] 변경 최종 리뷰"
+  short_description: "바뀐 코드의 실제 결함, 테스트 공백, 통합 가능 여부를 판단합니다."
+  default_prompt: "$review-change-verdict 스킬로 바뀐 코드의 실제 결함, 테스트 공백, 통합 가능 여부를 판단합니다."
+policy:
+  allow_implicit_invocation: true

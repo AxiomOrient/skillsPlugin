@@ -1,0 +1,6 @@
+interface:
+  display_name: "[meta] 분석 합의 정리"
+  short_description: "여러 분석 결과에서 일치점, 충돌점, 남은 확인 사항만 보수적으로 정리합니다."
+  default_prompt: "$meta-consensus 스킬로 여러 분석 결과에서 일치점, 충돌점, 남은 확인 사항만 보수적으로 정리합니다."
+policy:
+  allow_implicit_invocation: true

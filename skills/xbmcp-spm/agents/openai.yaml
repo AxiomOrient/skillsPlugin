@@ -1,0 +1,4 @@
+interface:
+  display_name: "[xbmcp] SPM"
+  short_description: "Swift Package를 빌드하거나 테스트합니다."
+  default_prompt: "$xbmcp-spm 스킬로 Swift Package를 빌드하거나 테스트합니다."

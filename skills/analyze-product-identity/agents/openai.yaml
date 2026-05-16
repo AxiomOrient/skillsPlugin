@@ -1,0 +1,6 @@
+interface:
+  display_name: "[analyze] 프로젝트 정체성 분석"
+  short_description: "코드와 문서를 근거로 프로젝트의 실제 목적과 사용자를 찾습니다."
+  default_prompt: "$analyze-product-identity 스킬로 코드와 문서를 근거로 프로젝트의 실제 목적과 사용자를 찾습니다."
+policy:
+  allow_implicit_invocation: true

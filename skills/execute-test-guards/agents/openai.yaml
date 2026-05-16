@@ -1,0 +1,6 @@
+interface:
+  display_name: "[execute] 회귀 테스트 추가"
+  short_description: "중요한 동작이 다시 깨지지 않도록 테스트를 추가하거나 강화합니다."
+  default_prompt: "$execute-test-guards 스킬로 중요한 동작이 다시 깨지지 않도록 테스트를 추가하거나 강화합니다."
+policy:
+  allow_implicit_invocation: true
