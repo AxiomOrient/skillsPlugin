@@ -86,13 +86,15 @@ It installs 11 scientific plugin packs, loads 142 skills, checks that no scienti
 
 ## GitHub Install
 
-AMA can install this repository directly from GitHub:
+AMA can install this repository directly from GitHub. In an AMA host app, pass the repository URL to `AMASkillLibrary.installSkillPlugins(fromRemoteRepositoryURL:)`:
 
-```text
-https://github.com/AxiomOrient/skillsPlugin
+```swift
+let installed = try await library.installSkillPlugins(
+    fromRemoteRepositoryURL: "https://github.com/AxiomOrient/skillsPlugin"
+)
 ```
 
-The repository root is indexed by `ama-skill-repository.json`, so AMA can manage the 11 scientific category packs as one source without scanning unrelated repository files.
+The repository root is indexed by `ama-skill-repository.json`, so AMA can manage the 11 scientific category packs as one source without scanning unrelated repository files. Installing the root URL currently installs 11 scientific plugin packs and 142 skills.
 
 It can also install one category pack at a time, for example:
 
@@ -100,4 +102,12 @@ It can also install one category pack at a time, for example:
 https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-documents
 ```
 
-When the repository is no longer needed, AMA removes the installed packs by matching the same source URL and uninstalling the plugin units together.
+When the repository is no longer needed, remove the installed packs with the same source URL:
+
+```swift
+let removedPluginIDs = try await library.uninstallSkillPlugins(
+    fromRemoteRepositoryURL: "https://github.com/AxiomOrient/skillsPlugin"
+)
+```
+
+The same rule applies to a category tree URL: install one pack with that URL, then uninstall that pack with the same URL.

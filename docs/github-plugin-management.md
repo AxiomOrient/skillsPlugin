@@ -30,6 +30,18 @@ Implemented AMA APIs:
 - `AMASkillLibrary.installSkillPlugins(fromRemoteRepositoryURL:selectedByDefault:)`
 - `AMASkillLibrary.uninstallSkillPlugins(fromRemoteRepositoryURL:)`
 
+Minimal host-app usage:
+
+```swift
+let installed = try await library.installSkillPlugins(
+    fromRemoteRepositoryURL: "https://github.com/AxiomOrient/skillsPlugin"
+)
+
+let removedPluginIDs = try await library.uninstallSkillPlugins(
+    fromRemoteRepositoryURL: "https://github.com/AxiomOrient/skillsPlugin"
+)
+```
+
 Install flow:
 
 1. Normalize the user-provided HTTPS GitHub URL.
