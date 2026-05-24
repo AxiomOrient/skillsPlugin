@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.documents",
+  "name": "Scientific Documents",
+  "version": "0.1.0",
+  "description": "Mobile-safe scientific document inspection, Markdown extraction, and document-authoring guidance for AMA iOS.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-documents",
+  "skills": [
+    {
+      "path": "skills/markitdown",
+      "selected": true
+    },
+    {
+      "path": "skills/markdown-mermaid-writing",
+      "selected": true
+    },
+    {
+      "path": "skills/docx",
+      "selected": true
+    },
+    {
+      "path": "skills/pptx",
+      "selected": true
+    },
+    {
+      "path": "skills/xlsx",
+      "selected": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.deferred.desktop",
+  "name": "Scientific Deferred Desktop",
+  "version": "0.1.0",
+  "description": "Desktop-only scientific skills installed for visibility but unavailable for local iOS execution.",
+  "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "skills": [
+    {
+      "path": "skills/autoskill"
+    },
+    {
+      "path": "skills/matlab"
+    }
+  ]
+}

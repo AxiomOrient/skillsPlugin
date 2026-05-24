@@ -28,6 +28,22 @@ The previous copied Codex/development-process skills were removed because AMA is
 - [Skill authoring guide](docs/skill-authoring-guide.md)
 - [Conversion guide](docs/conversion-guide.md)
 - [Swift capability guide](docs/swift-capability-guide.md)
+- [Scientific agent skills AMA plan](docs/scientific-agent-skills-ama-plan.md)
+- [Scientific agent skills per-skill AMA map](docs/scientific-agent-skills-skill-map.md)
+- [Scientific agent skills coverage audit](docs/scientific-agent-skills-coverage-audit.md)
+- [Scientific agent skills completion audit](docs/scientific-agent-skills-completion-audit.md)
+- [Scientific all plugin install AMA QA](docs/scientific-all-plugin-install-ama-qa.md)
+- [GitHub plugin management](docs/github-plugin-management.md)
+- [Scientific literature AMA QA](docs/scientific-literature-ama-qa.md)
+- [Scientific reference AMA QA](docs/scientific-reference-ama-qa.md)
+- [Scientific data lookup AMA QA](docs/scientific-data-lookup-ama-qa.md)
+- [Scientific clinical compliance AMA QA](docs/scientific-clinical-compliance-ama-qa.md)
+- [Scientific documents AMA QA](docs/scientific-documents-ama-qa.md)
+- [Scientific lab connectors AMA QA](docs/scientific-lab-connectors-ama-qa.md)
+- [Scientific compute remote AMA QA](docs/scientific-compute-remote-ama-qa.md)
+- [Scientific mobile preflight AMA QA](docs/scientific-mobile-preflight-ama-qa.md)
+- [iOS local execution research](docs/ios-local-execution-research.md)
+- [Scientific local execution AMA QA](docs/scientific-local-execution-ama-qa.md)
 - [Validation checklist](docs/validation-checklist.md)
 - [Templates](docs/templates.md)
 
@@ -43,5 +59,45 @@ The install unit must be the plugin category, not the entire repository.
 - `plugins/safety-trust`: security checklist, gate judgment.
 - `plugins/writing-continuity`: brief-to-draft, summarize.
 - `plugins/engineering-control`: patch shape.
+- `plugins/scientific-literature`: paper lookup, research lookup, citation management, literature review.
+- `plugins/scientific-reference`: brainstorming, critical thinking, peer review, scientific writing, what-if analysis.
+- `plugins/scientific-data-lookup`: database routing, Hugging Face dataset search, U.S. Fiscal Data lookup, DepMap planning.
+- `plugins/scientific-clinical-compliance`: clinical documentation, treatment-plan structure, and ISO 13485 QMS guidance.
+- `plugins/scientific-documents`: artifact inspection, Markdown extraction from text-like sources, Markdown/Mermaid writing, and Office-format guidance. The upstream `pdf` skill is intentionally removed; binary documents must come through Markdown or another supported text-like export path.
+- `plugins/scientific-lab-connectors`: Benchling, LabArchives, protocols.io, OMERO, DNAnexus, Ginkgo, LaminDB, LatchBio, Open Notebook, Opentrons, and PyLabRobot mobile preflight guidance.
+- `plugins/scientific-compute-remote`: 84 Python/scientific library, neurodata, GPU, simulation, model, pipeline, and large-file workflow skills routed through remote compute preflight.
+- `plugins/scientific-web-research`: API and web research skills routed through credentials, approval, and public lookup preflight.
+- `plugins/scientific-visual-artifacts`: visual, poster, slide, image, and schematic workflows routed through artifact renderer preflight.
+- `plugins/scientific-reasoning-docs`: document-only reasoning, grant, market research, hypothesis, literature, and scholar evaluation skills.
+- `plugins/scientific-deferred-desktop`: desktop-only upstream skills installed as unavailable on mobile.
 
-These skills do not ship Python, shell, PowerShell, batch, or Node scripts. They call AMA native Swift host intents such as `akasha.scope_lock` through `run_intent`.
+These skills do not ship Python, shell, PowerShell, batch, Node, R, MATLAB, or other executable desktop scripts. Runtime-backed packs call AMA native Swift host intents such as `akasha.scope_lock`, `scientific.paper_search`, `scientific.lab_connector_preflight`, `scientific.remote_job_preflight`, `scientific.web_api_preflight`, `scientific.artifact_workflow_preflight`, `scientific.numeric_eval`, `scientific.chart_render_svg`, and `scientific.deferred_desktop_preflight` through `run_intent`; documentation-only packs stay as mobile-safe reasoning instructions with reference files.
+
+## Verification
+
+The broad install/load smoke for all scientific packs is:
+
+```sh
+cd tools/ama_scientific_all_plugin_smoke
+swift run AMAScientificAllPluginSmoke
+```
+
+It installs 11 scientific plugin packs, loads 142 skills, checks that no scientific plugin ships executable helper files, verifies the removed `pdf` skill stays absent, and proves Python/MATLAB requests route to remote preflight or Swift native substitutes instead of local scripts.
+
+## GitHub Install
+
+AMA can install this repository directly from GitHub:
+
+```text
+https://github.com/AxiomOrient/skillsPlugin
+```
+
+The repository root is indexed by `ama-skill-repository.json`, so AMA can manage the 11 scientific category packs as one source without scanning unrelated repository files.
+
+It can also install one category pack at a time, for example:
+
+```text
+https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-documents
+```
+
+When the repository is no longer needed, AMA removes the installed packs by matching the same source URL and uninstalling the plugin units together.

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.reasoning.docs",
+  "name": "Scientific Reasoning Docs",
+  "version": "0.1.0",
+  "description": "Mobile-safe scientific reasoning, grant, market, evaluation, and hypothesis documentation skills.",
+  "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "skills": [
+    {
+      "path": "skills/consciousness-council"
+    },
+    {
+      "path": "skills/hypothesis-generation"
+    },
+    {
+      "path": "skills/literature-review"
+    },
+    {
+      "path": "skills/market-research-reports"
+    },
+    {
+      "path": "skills/research-grants"
+    },
+    {
+      "path": "skills/scholar-evaluation"
+    }
+  ]
+}

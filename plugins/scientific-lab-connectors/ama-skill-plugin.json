@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.lab.connectors",
+  "name": "Scientific Lab Connectors",
+  "version": "0.1.0",
+  "description": "Mobile-safe lab SaaS, ELN, cloud-lab, and lab-automation connector guidance with AMA Swift preflight policy checks.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-lab-connectors",
+  "skills": [
+    {"path": "skills/benchling-integration", "selected": true},
+    {"path": "skills/labarchive-integration", "selected": true},
+    {"path": "skills/protocolsio-integration", "selected": true},
+    {"path": "skills/omero-integration", "selected": true},
+    {"path": "skills/dnanexus-integration", "selected": true},
+    {"path": "skills/ginkgo-cloud-lab", "selected": true},
+    {"path": "skills/lamindb", "selected": true},
+    {"path": "skills/latchbio-integration", "selected": true},
+    {"path": "skills/open-notebook", "selected": true},
+    {"path": "skills/opentrons-integration", "selected": true},
+    {"path": "skills/pylabrobot", "selected": true}
+  ]
+}

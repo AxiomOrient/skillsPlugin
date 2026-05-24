@@ -1,0 +1,138 @@
+# GitHub Plugin Management For AMA
+
+Date: 2026-05-24
+
+## Decision
+
+AMA should manage large skill sets as GitHub-hosted plugin repositories, not as loose individual skills.
+
+The user-facing install input can be either:
+
+- Repository root: `https://github.com/AxiomOrient/skillsPlugin`
+- Specific plugin pack: `https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-documents`
+
+The repository root path installs the packs declared in `ama-skill-repository.json`, including the 11 scientific category packs. A specific plugin tree path installs only that pack.
+
+## Research Basis
+
+GitHub's REST Contents API can read public repository contents without authentication, and private repository access uses fine-grained tokens with `Contents` read permission. GitHub's archive endpoints are redirects and private archive URLs expire, so AMA uses the Contents API for deterministic file-by-file mobile installs instead of shelling out to `git` or relying on desktop zip tools.
+
+Reference:
+
+- GitHub REST repository contents: `https://docs.github.com/en/rest/repos/contents`
+- GitHub repository archive endpoints: `https://docs.github.com/en/rest/repos/contents#download-a-repository-archive-zip`
+
+## AMA Runtime Behavior
+
+Implemented AMA APIs:
+
+- `AMASkillLibrary.installSkillPlugins(fromRemoteRepositoryURL:selectedByDefault:)`
+- `AMASkillLibrary.uninstallSkillPlugins(fromRemoteRepositoryURL:)`
+
+Install flow:
+
+1. Normalize the user-provided HTTPS GitHub URL.
+2. Fetch repository contents through `AMAURLSessionRemoteSkillFetcher`.
+3. If the repository root contains `ama-skill-repository.json`, use that index to fetch only declared plugin pack paths.
+4. For a specific tree URL or repositories without an index, discover plugin manifests:
+   - `ama-skill-plugin.json`
+   - `.ama-plugin/plugin.json`
+   - `.codex-plugin/plugin.json`
+5. Materialize each plugin package into a temporary local directory.
+6. Reuse `installSkillPlugin(fromDirectoryURL:)` so local and GitHub installs share validation, skill-name collision checks, execution-support classification, selection state, and update behavior.
+7. Store each installation with a `sourceLocation` derived from the repository URL and plugin path.
+
+Uninstall flow:
+
+1. Normalize the same GitHub repository URL.
+2. Find installed plugin records whose `sourceLocation` matches that repository or a `#plugins/...` child.
+3. Remove all matched plugin skill directories and selection state through `uninstallSkillPlugin(id:)`.
+
+## Scientific Pack Management
+
+The root repository currently declares 11 scientific plugin packs in `ama-skill-repository.json`:
+
+```text
+scientific-clinical-compliance: 4
+scientific-compute-remote: 84
+scientific-data-lookup: 4
+scientific-deferred-desktop: 2
+scientific-documents: 5
+scientific-lab-connectors: 11
+scientific-literature: 4
+scientific-reasoning-docs: 6
+scientific-reference: 5
+scientific-visual-artifacts: 9
+scientific-web-research: 8
+```
+
+Total scientific installed skills: 142.
+
+This gives the app three management levels:
+
+- all packs: install/uninstall by repository URL
+- category pack: install/uninstall by plugin URL or plugin id
+- individual skill: load/select within the installed plugin, but delete by plugin unit
+
+## Verification
+
+AMA package test:
+
+```sh
+cd /Users/axient/repoAgent/AMA
+swift test --filter 'RemoteSkill|Plugin'
+```
+
+Result on 2026-05-24:
+
+```text
+13 tests passed
+```
+
+AMASample iOS simulator service test:
+
+```sh
+xcodebuild test \
+  -workspace /Users/axient/repoAgent/AMASample/App.xcworkspace \
+  -scheme AMASampleService \
+  -destination 'platform=iOS Simulator,name=iPad (A16)' \
+  -only-testing AMASampleServiceTests
+```
+
+Result on 2026-05-24:
+
+```text
+25 tests passed
+```
+
+Full scientific repository smoke:
+
+```sh
+cd /Users/axient/repoAgent/skillsPlugin/tools/ama_scientific_all_plugin_smoke
+swift run AMAScientificAllPluginSmoke
+```
+
+Result:
+
+```text
+scientific_plugin_count=11
+scientific_installed_skill_count=142
+scientific_loaded_skill_count=142
+scientific_executable_or_script_files=0
+scientific_script_runner_calls=0
+scientific_pdf_installed=false
+scientific_markdown_document_convertible=true
+scientific_python_route=blocked_remote_compute
+scientific_matlab_route=ios_native
+```
+
+## UI Contract
+
+The AMA app should expose:
+
+- `Install from GitHub URL`
+- `Update from source`
+- `Uninstall source`
+- per-pack install/uninstall controls for category packs
+
+For the current repository, entering `https://github.com/AxiomOrient/skillsPlugin` should install the whole pack set. Entering a tree URL under `plugins/` should install only that category.

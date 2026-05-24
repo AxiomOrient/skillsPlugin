@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.reference",
+  "name": "Scientific Reference",
+  "version": "0.1.0",
+  "description": "Mobile-safe research reasoning, review, and scientific writing skills backed by instructions and reference documents, without Python, shell, or desktop tools.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-reference",
+  "skills": [
+    {
+      "path": "skills/scientific-brainstorming",
+      "selected": true
+    },
+    {
+      "path": "skills/scientific-critical-thinking",
+      "selected": true
+    },
+    {
+      "path": "skills/peer-review",
+      "selected": true
+    },
+    {
+      "path": "skills/scientific-writing",
+      "selected": true
+    },
+    {
+      "path": "skills/what-if-oracle",
+      "selected": true
+    }
+  ]
+}

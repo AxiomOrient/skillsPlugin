@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.visual.artifacts",
+  "name": "Scientific Visual Artifacts",
+  "version": "0.1.0",
+  "description": "Mobile-safe scientific artifact, poster, slide, image, and visualization planning skills.",
+  "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "skills": [
+    {
+      "path": "skills/citation-management"
+    },
+    {
+      "path": "skills/generate-image"
+    },
+    {
+      "path": "skills/infographics"
+    },
+    {
+      "path": "skills/latex-posters"
+    },
+    {
+      "path": "skills/pptx-posters"
+    },
+    {
+      "path": "skills/scientific-schematics"
+    },
+    {
+      "path": "skills/scientific-slides"
+    },
+    {
+      "path": "skills/scientific-visualization"
+    },
+    {
+      "path": "skills/venue-templates"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.compute.remote",
+  "name": "Scientific Compute Remote",
+  "version": "0.1.0",
+  "description": "Mobile-safe remote compute preflight pack for Python, GPU, simulation, model, and large-file scientific skills.",
+  "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "skills": [
+    {
+      "path": "skills/aeon"
+    },
+    {
+      "path": "skills/anndata"
+    },
+    {
+      "path": "skills/arboreto"
+    },
+    {
+      "path": "skills/astropy"
+    },
+    {
+      "path": "skills/bids"
+    },
+    {
+      "path": "skills/biopython"
+    },
+    {
+      "path": "skills/bioservices"
+    },
+    {
+      "path": "skills/cellxgene-census"
+    },
+    {
+      "path": "skills/cirq"
+    },
+    {
+      "path": "skills/cobrapy"
+    },
+    {
+      "path": "skills/dask"
+    },
+    {
+      "path": "skills/datamol"
+    },
+    {
+      "path": "skills/deepchem"
+    },
+    {
+      "path": "skills/deeptools"
+    },
+    {
+      "path": "skills/dhdna-profiler"
+    },
+    {
+      "path": "skills/diffdock"
+    },
+    {
+      "path": "skills/esm"
+    },
+    {
+      "path": "skills/etetoolkit"
+    },
+    {
+      "path": "skills/exploratory-data-analysis"
+    },
+    {
+      "path": "skills/flowio"
+    },
+    {
+      "path": "skills/fluidsim"
+    },
+    {
+      "path": "skills/geniml"
+    },
+    {
+      "path": "skills/geomaster"
+    },
+    {
+      "path": "skills/geopandas"
+    },
+    {
+      "path": "skills/get-available-resources"
+    },
+    {
+      "path": "skills/gget"
+    },
+    {
+      "path": "skills/glycoengineering"
+    },
+    {
+      "path": "skills/gtars"
+    },
+    {
+      "path": "skills/histolab"
+    },
+    {
+      "path": "skills/hypogenic"
+    },
+    {
+      "path": "skills/matchms"
+    },
+    {
+      "path": "skills/matplotlib"
+    },
+    {
+      "path": "skills/medchem"
+    },
+    {
+      "path": "skills/modal"
+    },
+    {
+      "path": "skills/molecular-dynamics"
+    },
+    {
+      "path": "skills/molfeat"
+    },
+    {
+      "path": "skills/networkx"
+    },
+    {
+      "path": "skills/neurokit2"
+    },
+    {
+      "path": "skills/neuropixels-analysis"
+    },
+    {
+      "path": "skills/optimize-for-gpu"
+    },
+    {
+      "path": "skills/pacsomatic"
+    },
+    {
+      "path": "skills/parallel-web"
+    },
+    {
+      "path": "skills/pathml"
+    },
+    {
+      "path": "skills/pennylane"
+    },
+    {
+      "path": "skills/phylogenetics"
+    },
+    {
+      "path": "skills/polars"
+    },
+    {
+      "path": "skills/polars-bio"
+    },
+    {
+      "path": "skills/pufferlib"
+    },
+    {
+      "path": "skills/pydeseq2"
+    },
+    {
+      "path": "skills/pydicom"
+    },
+    {
+      "path": "skills/pyhealth"
+    },
+    {
+      "path": "skills/pymatgen"
+    },
+    {
+      "path": "skills/pymc"
+    },
+    {
+      "path": "skills/pymoo"
+    },
+    {
+      "path": "skills/pyopenms"
+    },
+    {
+      "path": "skills/pysam"
+    },
+    {
+      "path": "skills/pytdc"
+    },
+    {
+      "path": "skills/pytorch-lightning"
+    },
+    {
+      "path": "skills/pyzotero"
+    },
+    {
+      "path": "skills/qiskit"
+    },
+    {
+      "path": "skills/qutip"
+    },
+    {
+      "path": "skills/rdkit"
+    },
+    {
+      "path": "skills/rowan"
+    },
+    {
+      "path": "skills/scanpy"
+    },
+    {
+      "path": "skills/scikit-bio"
+    },
+    {
+      "path": "skills/scikit-learn"
+    },
+    {
+      "path": "skills/scikit-survival"
+    },
+    {
+      "path": "skills/scvelo"
+    },
+    {
+      "path": "skills/scvi-tools"
+    },
+    {
+      "path": "skills/seaborn"
+    },
+    {
+      "path": "skills/shap"
+    },
+    {
+      "path": "skills/simpy"
+    },
+    {
+      "path": "skills/stable-baselines3"
+    },
+    {
+      "path": "skills/statistical-analysis"
+    },
+    {
+      "path": "skills/statsmodels"
+    },
+    {
+      "path": "skills/sympy"
+    },
+    {
+      "path": "skills/tiledbvcf"
+    },
+    {
+      "path": "skills/timesfm-forecasting"
+    },
+    {
+      "path": "skills/torch-geometric"
+    },
+    {
+      "path": "skills/torchdrug"
+    },
+    {
+      "path": "skills/transformers"
+    },
+    {
+      "path": "skills/umap-learn"
+    },
+    {
+      "path": "skills/vaex"
+    },
+    {
+      "path": "skills/zarr-python"
+    }
+  ]
+}

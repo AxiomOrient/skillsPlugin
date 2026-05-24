@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.literature",
+  "name": "Scientific Literature",
+  "version": "0.1.0",
+  "description": "Mobile-safe scientific literature skills backed by AMA Swift host intents instead of Python, shell, or desktop search tools.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-literature",
+  "skills": [
+    {
+      "path": "skills/scientific-paper-lookup",
+      "selected": true
+    },
+    {
+      "path": "skills/scientific-research-lookup",
+      "selected": true
+    },
+    {
+      "path": "skills/scientific-citation-management",
+      "selected": true
+    },
+    {
+      "path": "skills/scientific-literature-review",
+      "selected": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.web.research",
+  "name": "Scientific Web Research",
+  "version": "0.1.0",
+  "description": "Mobile-safe web/API research skills routed through external lookup preflight.",
+  "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "skills": [
+    {
+      "path": "skills/adaptyv"
+    },
+    {
+      "path": "skills/bgpt-paper-search"
+    },
+    {
+      "path": "skills/exa-search"
+    },
+    {
+      "path": "skills/imaging-data-commons"
+    },
+    {
+      "path": "skills/paper-lookup"
+    },
+    {
+      "path": "skills/paperzilla"
+    },
+    {
+      "path": "skills/primekg"
+    },
+    {
+      "path": "skills/research-lookup"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.data.lookup",
+  "name": "Scientific Data Lookup",
+  "version": "0.1.0",
+  "description": "Mobile-safe scientific data discovery skills backed by AMA Swift REST host intents and documentation-only database references.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-data-lookup",
+  "skills": [
+    {
+      "path": "skills/database-lookup",
+      "selected": true
+    },
+    {
+      "path": "skills/hugging-science",
+      "selected": true
+    },
+    {
+      "path": "skills/usfiscaldata",
+      "selected": true
+    },
+    {
+      "path": "skills/depmap",
+      "selected": true
+    }
+  ]
+}

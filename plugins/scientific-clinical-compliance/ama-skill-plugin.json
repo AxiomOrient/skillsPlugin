@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "ama.skill.plugin.v1",
+  "id": "io.axiomorient.ama.scientific.clinical.compliance",
+  "name": "Scientific Clinical Compliance",
+  "version": "0.1.0",
+  "description": "Mobile-safe clinical, regulatory, and medical-device documentation guidance for AMA. Installs references and templates without scripts or external program execution.",
+  "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-clinical-compliance",
+  "skills": [
+    {
+      "path": "skills/clinical-decision-support",
+      "selected": true
+    },
+    {
+      "path": "skills/clinical-reports",
+      "selected": true
+    },
+    {
+      "path": "skills/treatment-plans",
+      "selected": true
+    },
+    {
+      "path": "skills/iso-13485-certification",
+      "selected": true
+    }
+  ]
+}
