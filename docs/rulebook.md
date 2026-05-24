@@ -61,7 +61,9 @@ Those names describe development workflow, not mobile user value.
 
 ## 4. Instruction-Only Skills Must Stay Instruction-Only
 
-If a skill has no executable backing, it must not mention `run_js` or `run_intent`. It should tell the model how to respond using available chat context.
+If a skill has no executable backing, it must not mention `run_js`. It should tell the model how to respond using available chat context.
+
+It may mention `run_intent` only when the plugin manifest, QA document, or AMA host code identifies a registered Swift host intent that owns the behavior. In that case the skill is not instruction-only; it is a thin host-intent skill.
 
 Instruction-only skills can include:
 
@@ -75,6 +77,8 @@ They must not include:
 - `scripts/`
 - `.py`, `.sh`, `.js`, `.ts`, `.rb`, `.php`
 - instructions to use shell, CLI, local repo tools, or desktop apps
+
+If the source skill originally required scripts or desktop tools, preserve the useful reference material but mark execution as mobile-unavailable, remote-preflight, deferred-desktop, or Swift-host-intent backed. Do not hide the missing runtime.
 
 ## 5. WebKit Skills Must Be Mobile-Sized
 
@@ -93,6 +97,17 @@ Do not port desktop Node or Python helpers into `scripts/`.
 If a behavior requires device state, app state, filesystem export, connector upload, permissions, or external app interaction, implement the behavior as a Swift host intent in AMA.
 
 The skill should call `run_intent` only with registered intent names and parameters.
+
+## 6a. External Runtime Work Must Be Routed
+
+Python, R, MATLAB, shell, Node, desktop browser automation, GPU workloads, large scientific files, and external service operations must not run locally inside an iOS skill package.
+
+Allowed routes:
+
+- `remote-preflight`: install the skill and route work to a Swift preflight intent that checks provider, consent, artifact count, and data sensitivity.
+- `ios-native`: replace the narrow behavior with a Swift host intent, such as numeric evaluation or Markdown artifact rendering.
+- `deferred-desktop`: install the skill as unavailable on mobile and explain why a desktop/runtime environment is required.
+- `instruction-only`: keep only documentation and response guidance when no execution is required.
 
 ## 7. Artifacts Are Runtime Outputs
 
@@ -124,3 +139,9 @@ Every proposed skill must include a validation note or checklist showing:
 - expected output shape
 - mobile permission or approval behavior
 - artifact behavior, if any
+
+## 11. Repository Root Is A Catalog, Not A Plugin
+
+The repository may expose `ama-skill-repository.json` at the root so AMA can install all declared category packs from a GitHub URL. That file is a catalog/index only.
+
+Do not replace category plugin manifests with one repository-wide `ama-skill-plugin.json`. Users must still be able to install or remove each coherent category pack.

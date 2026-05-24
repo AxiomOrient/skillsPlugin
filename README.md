@@ -1,6 +1,6 @@
 # AMA Skills Plugin Guide
 
-This repository contains AMA mobile skill plugin guidance and the first Akasha-to-AMA native skill packs.
+This repository contains AMA mobile skill plugin guidance, Akasha-to-AMA native skill packs, and the scientific AMA plugin packs.
 
 The previous copied Codex/development-process skills were removed because AMA is a mobile agent. AMA skills must be designed around iOS storage, WebKit execution, native host intents, artifact handling, and explicit plugin install/uninstall boundaries.
 
@@ -21,6 +21,7 @@ The previous copied Codex/development-process skills were removed because AMA is
 
 ## Documents
 
+- [Documentation index](docs/README.md)
 - [AMA project analysis](docs/ama-project-analysis.md)
 - [Akasha AMA compatibility](docs/akasha-ama-compatibility.md)
 - [Rulebook](docs/rulebook.md)
@@ -34,6 +35,7 @@ The previous copied Codex/development-process skills were removed because AMA is
 - [Scientific agent skills completion audit](docs/scientific-agent-skills-completion-audit.md)
 - [Scientific all plugin install AMA QA](docs/scientific-all-plugin-install-ama-qa.md)
 - [GitHub plugin management](docs/github-plugin-management.md)
+- [AMA mobile skill conversion rulebook](docs/ama-mobile-skill-conversion-rulebook.md)
 - [Scientific literature AMA QA](docs/scientific-literature-ama-qa.md)
 - [Scientific reference AMA QA](docs/scientific-reference-ama-qa.md)
 - [Scientific data lookup AMA QA](docs/scientific-data-lookup-ama-qa.md)
@@ -49,9 +51,9 @@ The previous copied Codex/development-process skills were removed because AMA is
 
 ## Current State
 
-Installable Akasha packs now live under `plugins/<category>/`. Each pack has its own `ama-skill-plugin.json` and can be installed or removed as one category.
+Installable packs live under `plugins/<category>/`. Each pack has its own `ama-skill-plugin.json` and can be installed or removed as one category.
 
-The install unit must be the plugin category, not the entire repository.
+The category plugin is the install/uninstall unit. The repository root is a catalog source through `ama-skill-repository.json`; installing the root URL installs the listed category plugins, not one giant repository-wide plugin.
 
 ## Installable Packs
 
