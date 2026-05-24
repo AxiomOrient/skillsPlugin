@@ -106,6 +106,33 @@ Before publishing a converted pack:
 - Local install/load smoke passes.
 - If published on GitHub, a live GitHub URL install/uninstall smoke passes for the root URL or the changed category tree URL.
 
+## Change Rules For Existing Packs
+
+Use these rules when changing or reorganizing an existing AMA skill pack:
+
+1. Do not rename a category unless the install/delete unit is wrong for mobile users.
+2. Do not split a pack only because it is large. Split only when users would install or remove the groups independently.
+3. Do not merge packs that have different runtime routes, such as instruction-only and remote preflight.
+4. Do not place deterministic behavior in `SKILL.md` if it can be safer and more testable as a Swift host intent.
+5. Do not place credentials, cost approval, data export, or provider selection in a skill instruction. Route them through Swift preflight.
+6. Do not preserve upstream script file names as placeholders. Convert required script behavior into Markdown rules, Swift capability requirements, or remote-provider requirements.
+7. Do not add binary PDFs. Convert reference material to Markdown or another text-like artifact.
+8. Do not introduce Codex/Claude process categories such as `analyze`, `execute`, `review`, or `qa`. AMA categories must describe mobile user value.
+9. After every change, validate manifest counts, executable absence, install/load behavior, and the intended runtime route.
+
+## Swift Capability Conversion Rule
+
+Create or update Swift code in AMA when the skill needs one of these surfaces:
+
+- iOS storage, bookmarks, sandboxed files, or artifact registration.
+- Device permissions, app state, selection state, or host UI state.
+- Network credential checks, provider availability checks, consent, or cost boundaries.
+- Deterministic computation that must be repeatable on device.
+- Security-sensitive blocking or allow/deny decisions.
+- A replacement for shell, Python, MATLAB, Node, desktop automation, or arbitrary local filesystem access.
+
+The converted `SKILL.md` should stay thin. It should name the mobile user job, collect only the needed user input, call `run_intent` with a stable intent name, and report the host result without inventing local execution.
+
 ## Example
 
 Original idea:

@@ -10,12 +10,24 @@ Evidence:
 
 - AMA core keeps Goal, Evolution, skill loading, plugin install state, source tracking, and mobile execution classification inside the app package.
 - `skillsPlugin` uses `ama-skill-repository.json` as the GitHub install catalog and `plugins/<category>/ama-skill-plugin.json` as the install/uninstall unit.
+- AMA `load_skill` exposes installed supporting files through bounded `supportingFiles` context, so converted packs can keep useful `references/`, `eval/`, and text assets without depending on local script execution.
 - The repository catalog declares 15 category plugins and 150 skills.
 - The scientific subset remains MECE: 11 scientific plugins and 142 skills.
 - Plugin packages ship Markdown and static references, not Python, shell, PowerShell, batch, Node, R, MATLAB, Swift helpers, PDFs, or desktop executable scripts.
 - Runtime-backed skills route through `run_intent` to Swift host capabilities or explicit remote/deferred preflight.
 
 This is better than copying Codex or Claude skills directly because AMA runs on iOS. The skill should describe the mobile user job and the allowed tool route; deterministic execution belongs in Swift host intents, and large external runtimes belong behind explicit remote preflight.
+
+Current verification evidence:
+
+- `swift test --filter 'RemoteSkill|Plugin'` in `/Users/axient/repoAgent/AMA`: 17 selected skill/plugin tests passed.
+- `swift test --filter 'importRemoteSkill'` in `/Users/axient/repoAgent/AMA`: 2 direct remote import tests passed.
+- `swift run AMAScientificAllPluginSmoke` in `tools/ama_scientific_all_plugin_smoke`: 15 plugins, 150 skills, 11 scientific plugins, and 142 scientific skills installed and loaded.
+- `swift run AMAScientificAllPluginSmoke --live-github` in `tools/ama_scientific_all_plugin_smoke`: GitHub root URL installed 15 plugins and 150 skills, then removed 15 plugins and left 0 installed plugins for that source.
+- `xcodebuild test -workspace /Users/axient/repoAgent/AMASample/App.xcworkspace -scheme AMASampleService -destination 'platform=iOS Simulator,name=iPad (A16)' -only-testing AMASampleServiceTests`: 25 iOS simulator service tests passed.
+- Documentation inventory for `README.md` and `docs/` resolves all indexed links.
+
+The structure should not be changed again unless a new requirement breaks one of these facts. Prefer adding a new category plugin or a new Swift host intent over changing the repository catalog contract.
 
 ## Decision Rules
 

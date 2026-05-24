@@ -87,6 +87,8 @@ swift run AMAScientificAllPluginSmoke
 
 It installs all 15 plugin packs and loads 150 skills. It also checks the 11 scientific plugin packs, verifies 142 scientific skills load, confirms no scientific plugin ships executable helper files, verifies the removed `pdf` skill stays absent, and proves Python/MATLAB requests route to remote preflight or Swift native substitutes instead of local scripts.
 
+AMA `load_skill` exposes installed supporting files as bounded context. `references/`, `eval/`, and text assets are installed with each pack and surfaced through the `supportingFiles` load result, while scripts and executable desktop runtimes remain unavailable on iOS.
+
 For a live GitHub root install/uninstall proof after publishing:
 
 ```sh
