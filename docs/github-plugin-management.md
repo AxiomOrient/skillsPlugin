@@ -47,10 +47,7 @@ Install flow:
 1. Normalize the user-provided HTTPS GitHub URL.
 2. Fetch repository contents through `AMAURLSessionRemoteSkillFetcher`.
 3. If the repository root contains `ama-skill-repository.json`, use that index and Git Trees API recursive listing to fetch only declared plugin pack paths.
-4. For a specific tree URL or repositories without an index, discover plugin manifests:
-   - `ama-skill-plugin.json`
-   - `.ama-plugin/plugin.json`
-   - `.codex-plugin/plugin.json`
+4. For a specific tree URL or repositories without an index, discover AMA plugin manifests named `ama-skill-plugin.json`.
 5. Materialize each plugin package into a temporary local directory.
 6. Reuse `installSkillPlugin(fromDirectoryURL:)` so local and GitHub installs share validation, skill-name collision checks, execution-support classification, selection state, and update behavior.
 7. Store each installation with a `sourceLocation` derived from the repository URL and plugin path.
@@ -99,7 +96,7 @@ swift test --filter 'RemoteSkill|Plugin'
 Result on 2026-05-24:
 
 ```text
-13 tests passed
+16 RemoteSkill|Plugin tests passed
 ```
 
 AMASample iOS simulator service test:
@@ -128,6 +125,9 @@ swift run AMAScientificAllPluginSmoke
 Result:
 
 ```text
+all_plugin_count=15
+all_installed_skill_count=150
+all_loaded_skill_count=150
 scientific_plugin_count=11
 scientific_installed_skill_count=142
 scientific_loaded_skill_count=142
@@ -137,6 +137,8 @@ scientific_pdf_installed=false
 scientific_markdown_document_convertible=true
 scientific_python_route=blocked_remote_compute
 scientific_matlab_route=ios_native
+akasha_security_status=ok
+akasha_security_verdict=BLOCK
 ```
 
 Live GitHub root install smoke:

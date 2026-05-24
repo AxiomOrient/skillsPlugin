@@ -26,13 +26,9 @@ Implication: a skill should not assume arbitrary filesystem access. Skill packag
 
 Evidence: `/Users/axient/repoAgent/AMA/Sources/AMASkills/Library/AMASkillLibrary+Plugins.swift`
 
-AMA supports plugin install with these manifest locations:
+AMA plugin install uses `ama-skill-plugin.json`.
 
-- `ama-skill-plugin.json`
-- `.ama-plugin/plugin.json`
-- `.codex-plugin/plugin.json`
-
-For AMA-specific packs, use `ama-skill-plugin.json`.
+Codex or Claude-style skill folders can still be imported as web/document skill packages through the remote skill import path, but they are not treated as AMA category plugins unless they provide an AMA plugin manifest.
 
 Plugin install behavior:
 
