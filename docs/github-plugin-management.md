@@ -96,7 +96,7 @@ swift test --filter 'RemoteSkill|Plugin'
 Result on 2026-05-24:
 
 ```text
-16 RemoteSkill|Plugin tests passed
+17 RemoteSkill|Plugin tests passed
 ```
 
 AMASample iOS simulator service test:
