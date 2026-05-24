@@ -15,11 +15,12 @@ The repository root path installs the packs declared in `ama-skill-repository.js
 
 ## Research Basis
 
-GitHub's REST Contents API can read public repository contents without authentication, and private repository access uses fine-grained tokens with `Contents` read permission. GitHub's archive endpoints are redirects and private archive URLs expire, so AMA uses the Contents API for deterministic file-by-file mobile installs instead of shelling out to `git` or relying on desktop zip tools.
+GitHub's REST Contents API can read public repository contents without authentication, and private repository access uses fine-grained tokens with `Contents` read permission. For large repository roots, GitHub's Git Trees API supports recursive tree listing, which avoids one Contents API call per directory. GitHub's archive endpoints are redirects and private archive URLs expire, so AMA uses Contents plus Trees API metadata and raw file downloads for deterministic file-by-file mobile installs instead of shelling out to `git` or relying on desktop zip tools.
 
 Reference:
 
 - GitHub REST repository contents: `https://docs.github.com/en/rest/repos/contents`
+- GitHub REST Git trees: `https://docs.github.com/en/rest/git/trees`
 - GitHub repository archive endpoints: `https://docs.github.com/en/rest/repos/contents#download-a-repository-archive-zip`
 
 ## AMA Runtime Behavior
@@ -33,7 +34,7 @@ Install flow:
 
 1. Normalize the user-provided HTTPS GitHub URL.
 2. Fetch repository contents through `AMAURLSessionRemoteSkillFetcher`.
-3. If the repository root contains `ama-skill-repository.json`, use that index to fetch only declared plugin pack paths.
+3. If the repository root contains `ama-skill-repository.json`, use that index and Git Trees API recursive listing to fetch only declared plugin pack paths.
 4. For a specific tree URL or repositories without an index, discover plugin manifests:
    - `ama-skill-plugin.json`
    - `.ama-plugin/plugin.json`
@@ -124,6 +125,16 @@ scientific_pdf_installed=false
 scientific_markdown_document_convertible=true
 scientific_python_route=blocked_remote_compute
 scientific_matlab_route=ios_native
+```
+
+Live GitHub root install smoke:
+
+```text
+source=https://github.com/AxiomOrient/skillsPlugin
+live_github_installations=11
+live_github_plugin_skills=142
+live_github_removed=11
+live_github_final_plugins=0
 ```
 
 ## UI Contract
