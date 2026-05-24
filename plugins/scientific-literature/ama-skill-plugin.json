@@ -8,19 +8,31 @@
   "skills": [
     {
       "path": "skills/scientific-paper-lookup",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/scientific-research-lookup",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/scientific-citation-management",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/scientific-literature-review",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     }
   ]
 }

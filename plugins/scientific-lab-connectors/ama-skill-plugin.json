@@ -6,16 +6,131 @@
   "description": "Mobile-safe lab SaaS, ELN, cloud-lab, and lab-automation connector guidance with AMA Swift preflight policy checks.",
   "homepage": "https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-lab-connectors",
   "skills": [
-    {"path": "skills/benchling-integration", "selected": true},
-    {"path": "skills/labarchive-integration", "selected": true},
-    {"path": "skills/protocolsio-integration", "selected": true},
-    {"path": "skills/omero-integration", "selected": true},
-    {"path": "skills/dnanexus-integration", "selected": true},
-    {"path": "skills/ginkgo-cloud-lab", "selected": true},
-    {"path": "skills/lamindb", "selected": true},
-    {"path": "skills/latchbio-integration", "selected": true},
-    {"path": "skills/open-notebook", "selected": true},
-    {"path": "skills/opentrons-integration", "selected": true},
-    {"path": "skills/pylabrobot", "selected": true}
+    {
+      "path": "skills/benchling-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/api_endpoints.md",
+        "references/authentication.md",
+        "references/sdk_reference.md"
+      ]
+    },
+    {
+      "path": "skills/labarchive-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/authentication_guide.md",
+        "references/integrations.md"
+      ]
+    },
+    {
+      "path": "skills/protocolsio-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/additional_features.md",
+        "references/authentication.md",
+        "references/discussions.md",
+        "references/file_manager.md",
+        "references/protocols_api.md",
+        "references/workspaces.md"
+      ]
+    },
+    {
+      "path": "skills/omero-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/advanced.md",
+        "references/connection.md",
+        "references/data_access.md",
+        "references/image_processing.md",
+        "references/metadata.md",
+        "references/rois.md",
+        "references/scripts.md",
+        "references/tables.md"
+      ]
+    },
+    {
+      "path": "skills/dnanexus-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/app-development.md",
+        "references/configuration.md",
+        "references/data-operations.md",
+        "references/job-execution.md",
+        "references/python-sdk.md"
+      ]
+    },
+    {
+      "path": "skills/ginkgo-cloud-lab",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/cell-free-protein-expression-optimization.md",
+        "references/cell-free-protein-expression-validation.md",
+        "references/fluorescent-pixel-art-generation.md"
+      ]
+    },
+    {
+      "path": "skills/lamindb",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/annotation-validation.md",
+        "references/core-concepts.md",
+        "references/data-management.md",
+        "references/integrations.md",
+        "references/ontologies.md",
+        "references/setup-deployment.md"
+      ]
+    },
+    {
+      "path": "skills/latchbio-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/data-management.md",
+        "references/resource-configuration.md",
+        "references/verified-workflows.md",
+        "references/workflow-creation.md"
+      ]
+    },
+    {
+      "path": "skills/open-notebook",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/architecture.md",
+        "references/configuration.md",
+        "references/examples.md"
+      ]
+    },
+    {
+      "path": "skills/opentrons-integration",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md"
+      ]
+    },
+    {
+      "path": "skills/pylabrobot",
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/analytical-equipment.md",
+        "references/hardware-backends.md",
+        "references/liquid-handling.md",
+        "references/material-handling.md",
+        "references/resources.md",
+        "references/visualization.md"
+      ]
+    }
   ]
 }

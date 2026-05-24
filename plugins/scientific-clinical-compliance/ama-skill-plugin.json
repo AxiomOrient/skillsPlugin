@@ -8,19 +8,89 @@
   "skills": [
     {
       "path": "skills/clinical-decision-support",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "assets/biomarker_report_template.tex",
+        "assets/clinical_pathway_template.tex",
+        "assets/cohort_analysis_template.tex",
+        "assets/color_schemes.tex",
+        "assets/example_gbm_cohort.md",
+        "assets/recommendation_strength_guide.md",
+        "assets/treatment_recommendation_template.tex",
+        "references/README.md",
+        "references/biomarker_classification.md",
+        "references/clinical_decision_algorithms.md",
+        "references/evidence_synthesis.md",
+        "references/outcome_analysis.md",
+        "references/patient_cohort_analysis.md",
+        "references/treatment_recommendations.md"
+      ]
     },
     {
       "path": "skills/clinical-reports",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "assets/case_report_template.md",
+        "assets/clinical_trial_csr_template.md",
+        "assets/clinical_trial_sae_template.md",
+        "assets/consult_note_template.md",
+        "assets/discharge_summary_template.md",
+        "assets/hipaa_compliance_checklist.md",
+        "assets/history_physical_template.md",
+        "assets/lab_report_template.md",
+        "assets/pathology_report_template.md",
+        "assets/quality_checklist.md",
+        "assets/radiology_report_template.md",
+        "assets/soap_note_template.md",
+        "references/README.md",
+        "references/case_report_guidelines.md",
+        "references/clinical_trial_reporting.md",
+        "references/data_presentation.md",
+        "references/diagnostic_reports_standards.md",
+        "references/medical_terminology.md",
+        "references/patient_documentation.md",
+        "references/peer_review_standards.md",
+        "references/regulatory_compliance.md"
+      ]
     },
     {
       "path": "skills/treatment-plans",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "assets/STYLING_QUICK_REFERENCE.md",
+        "assets/chronic_disease_management_plan.tex",
+        "assets/general_medical_treatment_plan.tex",
+        "assets/medical_treatment_plan.sty",
+        "assets/mental_health_treatment_plan.tex",
+        "assets/one_page_treatment_plan.tex",
+        "assets/pain_management_plan.tex",
+        "assets/perioperative_care_plan.tex",
+        "assets/quality_checklist.md",
+        "assets/rehabilitation_treatment_plan.tex",
+        "references/README.md",
+        "references/goal_setting_frameworks.md",
+        "references/intervention_guidelines.md",
+        "references/regulatory_compliance.md",
+        "references/specialty_specific_guidelines.md",
+        "references/treatment_plan_standards.md"
+      ]
     },
     {
       "path": "skills/iso-13485-certification",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "assets/templates/procedures/CAPA-procedure-template.md",
+        "assets/templates/procedures/document-control-procedure-template.md",
+        "assets/templates/quality-manual-template.md",
+        "references/gap-analysis-checklist.md",
+        "references/iso-13485-requirements.md",
+        "references/mandatory-documents.md",
+        "references/quality-manual-guide.md"
+      ]
     }
   ]
 }

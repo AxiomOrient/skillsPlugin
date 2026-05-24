@@ -8,19 +8,123 @@
   "skills": [
     {
       "path": "skills/database-lookup",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/addgene.md",
+        "references/alphafold.md",
+        "references/alphavantage.md",
+        "references/bea.md",
+        "references/bindingdb.md",
+        "references/biogrid.md",
+        "references/bls.md",
+        "references/brenda.md",
+        "references/cbioportal.md",
+        "references/census.md",
+        "references/chebi.md",
+        "references/chembl.md",
+        "references/clinicaltrials.md",
+        "references/clinpgx.md",
+        "references/clinvar.md",
+        "references/cod.md",
+        "references/cosmic.md",
+        "references/dailymed.md",
+        "references/datacommons.md",
+        "references/dbsnp.md",
+        "references/disgenet.md",
+        "references/drugbank.md",
+        "references/ecb.md",
+        "references/emdb.md",
+        "references/ena.md",
+        "references/encode.md",
+        "references/ensembl.md",
+        "references/epa.md",
+        "references/eurostat.md",
+        "references/fda.md",
+        "references/federal-reserve.md",
+        "references/fred.md",
+        "references/gene-ontology.md",
+        "references/geo.md",
+        "references/gnomad.md",
+        "references/gtex.md",
+        "references/gwas-catalog.md",
+        "references/hca.md",
+        "references/hpo.md",
+        "references/human-protein-atlas.md",
+        "references/interpro.md",
+        "references/jaspar.md",
+        "references/kegg.md",
+        "references/lincs-l1000.md",
+        "references/materials-project.md",
+        "references/metabolomics-workbench.md",
+        "references/monarch.md",
+        "references/mousemine.md",
+        "references/nasa-exoplanet-archive.md",
+        "references/nasa.md",
+        "references/ncbi-gene.md",
+        "references/ncbi-protein.md",
+        "references/ncbi-taxonomy.md",
+        "references/nist.md",
+        "references/noaa.md",
+        "references/omim.md",
+        "references/opentargets.md",
+        "references/openweathermap.md",
+        "references/pdb.md",
+        "references/pride.md",
+        "references/pubchem.md",
+        "references/quickgo.md",
+        "references/reactome.md",
+        "references/rummageo.md",
+        "references/sdss.md",
+        "references/sec-edgar.md",
+        "references/simbad.md",
+        "references/sra.md",
+        "references/string.md",
+        "references/tcga-gdc.md",
+        "references/treasury.md",
+        "references/ucsc-genome.md",
+        "references/uniprot.md",
+        "references/usgs.md",
+        "references/uspto.md",
+        "references/who.md",
+        "references/worldbank.md",
+        "references/zinc.md"
+      ]
     },
     {
       "path": "skills/hugging-science",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/flagship-resources.md",
+        "references/topics-and-slugs.md",
+        "references/using-datasets.md",
+        "references/using-models.md",
+        "references/using-spaces.md"
+      ]
     },
     {
       "path": "skills/usfiscaldata",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/api-basics.md",
+        "references/datasets-debt.md",
+        "references/datasets-fiscal.md",
+        "references/datasets-interest-rates.md",
+        "references/datasets-securities.md",
+        "references/examples.md",
+        "references/parameters.md",
+        "references/response-format.md"
+      ]
     },
     {
       "path": "skills/depmap",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/dependency_analysis.md"
+      ]
     }
   ]
 }

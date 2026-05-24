@@ -8,11 +8,17 @@
   "skills": [
     {
       "path": "skills/akasha-brief-to-draft",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/akasha-summarize",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     }
   ]
 }

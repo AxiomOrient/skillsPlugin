@@ -7,10 +7,28 @@
   "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
   "skills": [
     {
-      "path": "skills/autoskill"
+      "path": "skills/autoskill",
+      "files": [
+        ".gitignore",
+        "SKILL.md",
+        "config.yaml",
+        "references/https-proxy.md",
+        "references/screenpipe-config.yaml"
+      ]
     },
     {
-      "path": "skills/matlab"
+      "path": "skills/matlab",
+      "files": [
+        "SKILL.md",
+        "references/data-import-export.md",
+        "references/executing-scripts.md",
+        "references/graphics-visualization.md",
+        "references/mathematics.md",
+        "references/matrices-arrays.md",
+        "references/octave-compatibility.md",
+        "references/programming.md",
+        "references/python-integration.md"
+      ]
     }
   ]
 }

@@ -8,15 +8,24 @@
   "skills": [
     {
       "path": "skills/akasha-scope-lock",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/akasha-route-lock",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/akasha-request-router",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     }
   ]
 }

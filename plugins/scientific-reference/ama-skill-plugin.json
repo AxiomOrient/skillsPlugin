@@ -8,23 +8,57 @@
   "skills": [
     {
       "path": "skills/scientific-brainstorming",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/brainstorming_methods.md"
+      ]
     },
     {
       "path": "skills/scientific-critical-thinking",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/common_biases.md",
+        "references/evidence_hierarchy.md",
+        "references/experimental_design.md",
+        "references/logical_fallacies.md",
+        "references/scientific_method.md",
+        "references/statistical_pitfalls.md"
+      ]
     },
     {
       "path": "skills/peer-review",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/common_issues.md",
+        "references/reporting_standards.md"
+      ]
     },
     {
       "path": "skills/scientific-writing",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "assets/REPORT_FORMATTING_GUIDE.md",
+        "assets/scientific_report.sty",
+        "assets/scientific_report_template.tex",
+        "references/citation_styles.md",
+        "references/figures_tables.md",
+        "references/imrad_structure.md",
+        "references/professional_report_formatting.md",
+        "references/reporting_guidelines.md",
+        "references/writing_principles.md"
+      ]
     },
     {
       "path": "skills/what-if-oracle",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md",
+        "references/scenario-templates.md"
+      ]
     }
   ]
 }

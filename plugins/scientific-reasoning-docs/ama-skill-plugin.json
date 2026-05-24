@@ -7,22 +7,68 @@
   "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
   "skills": [
     {
-      "path": "skills/consciousness-council"
+      "path": "skills/consciousness-council",
+      "files": [
+        "SKILL.md",
+        "references/advanced-configurations.md"
+      ]
     },
     {
-      "path": "skills/hypothesis-generation"
+      "path": "skills/hypothesis-generation",
+      "files": [
+        "SKILL.md",
+        "assets/FORMATTING_GUIDE.md",
+        "assets/hypothesis_generation.sty",
+        "assets/hypothesis_report_template.tex",
+        "references/experimental_design_patterns.md",
+        "references/hypothesis_quality_criteria.md",
+        "references/literature_search_strategies.md"
+      ]
     },
     {
-      "path": "skills/literature-review"
+      "path": "skills/literature-review",
+      "files": [
+        "SKILL.md",
+        "assets/review_template.md",
+        "references/citation_styles.md",
+        "references/database_strategies.md"
+      ]
     },
     {
-      "path": "skills/market-research-reports"
+      "path": "skills/market-research-reports",
+      "files": [
+        "SKILL.md",
+        "assets/FORMATTING_GUIDE.md",
+        "assets/market_report_template.tex",
+        "assets/market_research.sty",
+        "references/data_analysis_patterns.md",
+        "references/report_structure_guide.md",
+        "references/visual_generation_guide.md"
+      ]
     },
     {
-      "path": "skills/research-grants"
+      "path": "skills/research-grants",
+      "files": [
+        "SKILL.md",
+        "assets/budget_justification_template.md",
+        "assets/nih_specific_aims_template.md",
+        "assets/nsf_project_summary_template.md",
+        "references/README.md",
+        "references/broader_impacts.md",
+        "references/darpa_guidelines.md",
+        "references/doe_guidelines.md",
+        "references/nih_guidelines.md",
+        "references/nsf_guidelines.md",
+        "references/nstc_guidelines.md",
+        "references/specific_aims_guide.md"
+      ]
     },
     {
-      "path": "skills/scholar-evaluation"
+      "path": "skills/scholar-evaluation",
+      "files": [
+        "SKILL.md",
+        "references/evaluation_framework.md"
+      ]
     }
   ]
 }

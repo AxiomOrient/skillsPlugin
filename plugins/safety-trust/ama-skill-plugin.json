@@ -8,11 +8,17 @@
   "skills": [
     {
       "path": "skills/akasha-security-checklist",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
       "path": "skills/akasha-gate-judgment",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     }
   ]
 }

@@ -8,7 +8,10 @@
   "skills": [
     {
       "path": "skills/akasha-patch-shape",
-      "selected": true
+      "selected": true,
+      "files": [
+        "SKILL.md"
+      ]
     }
   ]
 }

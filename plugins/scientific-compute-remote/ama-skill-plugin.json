@@ -7,256 +7,924 @@
   "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
   "skills": [
     {
-      "path": "skills/aeon"
-    },
-    {
-      "path": "skills/anndata"
-    },
-    {
-      "path": "skills/arboreto"
-    },
-    {
-      "path": "skills/astropy"
-    },
-    {
-      "path": "skills/bids"
-    },
-    {
-      "path": "skills/biopython"
-    },
-    {
-      "path": "skills/bioservices"
-    },
-    {
-      "path": "skills/cellxgene-census"
-    },
-    {
-      "path": "skills/cirq"
-    },
-    {
-      "path": "skills/cobrapy"
-    },
-    {
-      "path": "skills/dask"
-    },
-    {
-      "path": "skills/datamol"
-    },
-    {
-      "path": "skills/deepchem"
-    },
-    {
-      "path": "skills/deeptools"
-    },
-    {
-      "path": "skills/dhdna-profiler"
-    },
-    {
-      "path": "skills/diffdock"
-    },
-    {
-      "path": "skills/esm"
-    },
-    {
-      "path": "skills/etetoolkit"
-    },
-    {
-      "path": "skills/exploratory-data-analysis"
-    },
-    {
-      "path": "skills/flowio"
-    },
-    {
-      "path": "skills/fluidsim"
-    },
-    {
-      "path": "skills/geniml"
-    },
-    {
-      "path": "skills/geomaster"
-    },
-    {
-      "path": "skills/geopandas"
-    },
-    {
-      "path": "skills/get-available-resources"
-    },
-    {
-      "path": "skills/gget"
-    },
-    {
-      "path": "skills/glycoengineering"
-    },
-    {
-      "path": "skills/gtars"
-    },
-    {
-      "path": "skills/histolab"
-    },
-    {
-      "path": "skills/hypogenic"
-    },
-    {
-      "path": "skills/matchms"
-    },
-    {
-      "path": "skills/matplotlib"
-    },
-    {
-      "path": "skills/medchem"
-    },
-    {
-      "path": "skills/modal"
-    },
-    {
-      "path": "skills/molecular-dynamics"
-    },
-    {
-      "path": "skills/molfeat"
-    },
-    {
-      "path": "skills/networkx"
-    },
-    {
-      "path": "skills/neurokit2"
-    },
-    {
-      "path": "skills/neuropixels-analysis"
-    },
-    {
-      "path": "skills/optimize-for-gpu"
-    },
-    {
-      "path": "skills/pacsomatic"
-    },
-    {
-      "path": "skills/parallel-web"
-    },
-    {
-      "path": "skills/pathml"
-    },
-    {
-      "path": "skills/pennylane"
-    },
-    {
-      "path": "skills/phylogenetics"
-    },
-    {
-      "path": "skills/polars"
-    },
-    {
-      "path": "skills/polars-bio"
-    },
-    {
-      "path": "skills/pufferlib"
-    },
-    {
-      "path": "skills/pydeseq2"
-    },
-    {
-      "path": "skills/pydicom"
-    },
-    {
-      "path": "skills/pyhealth"
-    },
-    {
-      "path": "skills/pymatgen"
-    },
-    {
-      "path": "skills/pymc"
-    },
-    {
-      "path": "skills/pymoo"
-    },
-    {
-      "path": "skills/pyopenms"
-    },
-    {
-      "path": "skills/pysam"
-    },
-    {
-      "path": "skills/pytdc"
-    },
-    {
-      "path": "skills/pytorch-lightning"
-    },
-    {
-      "path": "skills/pyzotero"
-    },
-    {
-      "path": "skills/qiskit"
-    },
-    {
-      "path": "skills/qutip"
-    },
-    {
-      "path": "skills/rdkit"
-    },
-    {
-      "path": "skills/rowan"
-    },
-    {
-      "path": "skills/scanpy"
-    },
-    {
-      "path": "skills/scikit-bio"
-    },
-    {
-      "path": "skills/scikit-learn"
-    },
-    {
-      "path": "skills/scikit-survival"
-    },
-    {
-      "path": "skills/scvelo"
-    },
-    {
-      "path": "skills/scvi-tools"
-    },
-    {
-      "path": "skills/seaborn"
-    },
-    {
-      "path": "skills/shap"
-    },
-    {
-      "path": "skills/simpy"
-    },
-    {
-      "path": "skills/stable-baselines3"
-    },
-    {
-      "path": "skills/statistical-analysis"
-    },
-    {
-      "path": "skills/statsmodels"
-    },
-    {
-      "path": "skills/sympy"
-    },
-    {
-      "path": "skills/tiledbvcf"
-    },
-    {
-      "path": "skills/timesfm-forecasting"
-    },
-    {
-      "path": "skills/torch-geometric"
-    },
-    {
-      "path": "skills/torchdrug"
-    },
-    {
-      "path": "skills/transformers"
-    },
-    {
-      "path": "skills/umap-learn"
-    },
-    {
-      "path": "skills/vaex"
-    },
-    {
-      "path": "skills/zarr-python"
+      "path": "skills/aeon",
+      "files": [
+        "SKILL.md",
+        "references/anomaly_detection.md",
+        "references/classification.md",
+        "references/clustering.md",
+        "references/datasets_benchmarking.md",
+        "references/distances.md",
+        "references/forecasting.md",
+        "references/networks.md",
+        "references/regression.md",
+        "references/segmentation.md",
+        "references/similarity_search.md",
+        "references/transformations.md"
+      ]
+    },
+    {
+      "path": "skills/anndata",
+      "files": [
+        "SKILL.md",
+        "references/best_practices.md",
+        "references/concatenation.md",
+        "references/data_structure.md",
+        "references/io_operations.md",
+        "references/manipulation.md"
+      ]
+    },
+    {
+      "path": "skills/arboreto",
+      "files": [
+        "SKILL.md",
+        "references/algorithms.md",
+        "references/basic_inference.md",
+        "references/distributed_computing.md"
+      ]
+    },
+    {
+      "path": "skills/astropy",
+      "files": [
+        "SKILL.md",
+        "references/coordinates.md",
+        "references/cosmology.md",
+        "references/fits.md",
+        "references/tables.md",
+        "references/time.md",
+        "references/units.md",
+        "references/wcs_and_other_modules.md"
+      ]
+    },
+    {
+      "path": "skills/bids",
+      "files": [
+        "SKILL.md",
+        "references/beps.yml",
+        "references/bids_schema.json",
+        "references/bids_specification.md",
+        "references/conversion_tools.md",
+        "references/metadata_fields.md"
+      ]
+    },
+    {
+      "path": "skills/biopython",
+      "files": [
+        "SKILL.md",
+        "references/advanced.md",
+        "references/alignment.md",
+        "references/blast.md",
+        "references/databases.md",
+        "references/phylogenetics.md",
+        "references/sequence_io.md",
+        "references/structure.md"
+      ]
+    },
+    {
+      "path": "skills/bioservices",
+      "files": [
+        "SKILL.md",
+        "references/identifier_mapping.md",
+        "references/services_reference.md",
+        "references/workflow_patterns.md"
+      ]
+    },
+    {
+      "path": "skills/cellxgene-census",
+      "files": [
+        "SKILL.md",
+        "references/census_schema.md",
+        "references/common_patterns.md"
+      ]
+    },
+    {
+      "path": "skills/cirq",
+      "files": [
+        "SKILL.md",
+        "references/building.md",
+        "references/experiments.md",
+        "references/hardware.md",
+        "references/noise.md",
+        "references/simulation.md",
+        "references/transformation.md"
+      ]
+    },
+    {
+      "path": "skills/cobrapy",
+      "files": [
+        "SKILL.md",
+        "references/api_quick_reference.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/dask",
+      "files": [
+        "SKILL.md",
+        "references/arrays.md",
+        "references/bags.md",
+        "references/best-practices.md",
+        "references/dataframes.md",
+        "references/futures.md",
+        "references/schedulers.md"
+      ]
+    },
+    {
+      "path": "skills/datamol",
+      "files": [
+        "SKILL.md",
+        "references/conformers_module.md",
+        "references/core_api.md",
+        "references/descriptors_viz.md",
+        "references/fragments_scaffolds.md",
+        "references/io_module.md",
+        "references/reactions_data.md"
+      ]
+    },
+    {
+      "path": "skills/deepchem",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/deeptools",
+      "files": [
+        "SKILL.md",
+        "assets/quick_reference.md",
+        "references/effective_genome_sizes.md",
+        "references/normalization_methods.md",
+        "references/tools_reference.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/dhdna-profiler",
+      "files": [
+        "SKILL.md",
+        "references/advanced-profiling.md"
+      ]
+    },
+    {
+      "path": "skills/diffdock",
+      "files": [
+        "SKILL.md",
+        "assets/batch_template.csv",
+        "assets/custom_inference_config.yaml",
+        "references/confidence_and_limitations.md",
+        "references/parameters_reference.md",
+        "references/workflows_examples.md"
+      ]
+    },
+    {
+      "path": "skills/esm",
+      "files": [
+        "SKILL.md",
+        "references/esm-c-api.md",
+        "references/esm3-api.md",
+        "references/forge-api.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/etetoolkit",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/visualization.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/exploratory-data-analysis",
+      "files": [
+        "SKILL.md",
+        "assets/report_template.md",
+        "references/bioinformatics_genomics_formats.md",
+        "references/chemistry_molecular_formats.md",
+        "references/general_scientific_formats.md",
+        "references/microscopy_imaging_formats.md",
+        "references/proteomics_metabolomics_formats.md",
+        "references/spectroscopy_analytical_formats.md"
+      ]
+    },
+    {
+      "path": "skills/flowio",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md"
+      ]
+    },
+    {
+      "path": "skills/fluidsim",
+      "files": [
+        "SKILL.md",
+        "references/advanced_features.md",
+        "references/installation.md",
+        "references/output_analysis.md",
+        "references/parameters.md",
+        "references/simulation_workflow.md",
+        "references/solvers.md"
+      ]
+    },
+    {
+      "path": "skills/geniml",
+      "files": [
+        "SKILL.md",
+        "references/bedspace.md",
+        "references/consensus_peaks.md",
+        "references/region2vec.md",
+        "references/scembed.md",
+        "references/utilities.md"
+      ]
+    },
+    {
+      "path": "skills/geomaster",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "references/advanced-gis.md",
+        "references/big-data.md",
+        "references/code-examples.md",
+        "references/coordinate-systems.md",
+        "references/core-libraries.md",
+        "references/data-sources.md",
+        "references/gis-software.md",
+        "references/industry-applications.md",
+        "references/machine-learning.md",
+        "references/programming-languages.md",
+        "references/remote-sensing.md",
+        "references/scientific-domains.md",
+        "references/specialized-topics.md",
+        "references/troubleshooting.md"
+      ]
+    },
+    {
+      "path": "skills/geopandas",
+      "files": [
+        "SKILL.md",
+        "references/crs-management.md",
+        "references/data-io.md",
+        "references/data-structures.md",
+        "references/geometric-operations.md",
+        "references/spatial-analysis.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/get-available-resources",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/gget",
+      "files": [
+        "SKILL.md",
+        "references/database_info.md",
+        "references/module_reference.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/glycoengineering",
+      "files": [
+        "SKILL.md",
+        "references/glycan_databases.md"
+      ]
+    },
+    {
+      "path": "skills/gtars",
+      "files": [
+        "SKILL.md",
+        "references/cli.md",
+        "references/coverage.md",
+        "references/overlap.md",
+        "references/python-api.md",
+        "references/refget.md",
+        "references/tokenizers.md"
+      ]
+    },
+    {
+      "path": "skills/histolab",
+      "files": [
+        "SKILL.md",
+        "references/filters_preprocessing.md",
+        "references/slide_management.md",
+        "references/tile_extraction.md",
+        "references/tissue_masks.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/hypogenic",
+      "files": [
+        "SKILL.md",
+        "references/config_template.yaml"
+      ]
+    },
+    {
+      "path": "skills/matchms",
+      "files": [
+        "SKILL.md",
+        "references/filtering.md",
+        "references/importing_exporting.md",
+        "references/similarity.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/matplotlib",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/common_issues.md",
+        "references/plot_types.md",
+        "references/styling_guide.md"
+      ]
+    },
+    {
+      "path": "skills/medchem",
+      "files": [
+        "SKILL.md",
+        "references/api_guide.md",
+        "references/rules_catalog.md"
+      ]
+    },
+    {
+      "path": "skills/modal",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/examples.md",
+        "references/functions.md",
+        "references/getting-started.md",
+        "references/gpu.md",
+        "references/images.md",
+        "references/resources.md",
+        "references/scaling.md",
+        "references/scheduled-jobs.md",
+        "references/secrets.md",
+        "references/volumes.md",
+        "references/web-endpoints.md"
+      ]
+    },
+    {
+      "path": "skills/molecular-dynamics",
+      "files": [
+        "SKILL.md",
+        "references/mdanalysis_analysis.md"
+      ]
+    },
+    {
+      "path": "skills/molfeat",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/available_featurizers.md",
+        "references/examples.md"
+      ]
+    },
+    {
+      "path": "skills/networkx",
+      "files": [
+        "SKILL.md",
+        "references/algorithms.md",
+        "references/generators.md",
+        "references/graph-basics.md",
+        "references/io.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/neurokit2",
+      "files": [
+        "SKILL.md",
+        "references/bio_module.md",
+        "references/complexity.md",
+        "references/ecg_cardiac.md",
+        "references/eda.md",
+        "references/eeg.md",
+        "references/emg.md",
+        "references/eog.md",
+        "references/epochs_events.md",
+        "references/hrv.md",
+        "references/ppg.md",
+        "references/rsp.md",
+        "references/signal_processing.md"
+      ]
+    },
+    {
+      "path": "skills/neuropixels-analysis",
+      "files": [
+        "SKILL.md",
+        "references/AI_CURATION.md",
+        "references/ANALYSIS.md",
+        "references/AUTOMATED_CURATION.md",
+        "references/MOTION_CORRECTION.md",
+        "references/PREPROCESSING.md",
+        "references/QUALITY_METRICS.md",
+        "references/SPIKE_SORTING.md",
+        "references/api_reference.md",
+        "references/plotting_guide.md",
+        "references/standard_workflow.md"
+      ]
+    },
+    {
+      "path": "skills/optimize-for-gpu",
+      "files": [
+        "SKILL.md",
+        "references/cucim.md",
+        "references/cudf.md",
+        "references/cugraph.md",
+        "references/cuml.md",
+        "references/cupy.md",
+        "references/cuspatial.md",
+        "references/cuvs.md",
+        "references/cuxfilter.md",
+        "references/kvikio.md",
+        "references/numba.md",
+        "references/raft.md",
+        "references/warp.md"
+      ]
+    },
+    {
+      "path": "skills/pacsomatic",
+      "files": [
+        "SKILL.md",
+        "references/LICENSE",
+        "references/agent-playbook.md",
+        "references/config-and-output.md",
+        "references/config.yaml",
+        "references/pacsomatic_guide.md"
+      ]
+    },
+    {
+      "path": "skills/parallel-web",
+      "files": [
+        "SKILL.md",
+        "references/data-enrichment.md",
+        "references/deep-research.md",
+        "references/web-extract.md",
+        "references/web-search.md"
+      ]
+    },
+    {
+      "path": "skills/pathml",
+      "files": [
+        "SKILL.md",
+        "references/data_management.md",
+        "references/graphs.md",
+        "references/image_loading.md",
+        "references/machine_learning.md",
+        "references/multiparametric.md",
+        "references/preprocessing.md"
+      ]
+    },
+    {
+      "path": "skills/pennylane",
+      "files": [
+        "SKILL.md",
+        "references/advanced_features.md",
+        "references/devices_backends.md",
+        "references/getting_started.md",
+        "references/optimization.md",
+        "references/quantum_chemistry.md",
+        "references/quantum_circuits.md",
+        "references/quantum_ml.md"
+      ]
+    },
+    {
+      "path": "skills/phylogenetics",
+      "files": [
+        "SKILL.md",
+        "references/iqtree_inference.md"
+      ]
+    },
+    {
+      "path": "skills/polars",
+      "files": [
+        "SKILL.md",
+        "references/best_practices.md",
+        "references/core_concepts.md",
+        "references/io_guide.md",
+        "references/operations.md",
+        "references/pandas_migration.md",
+        "references/transformations.md"
+      ]
+    },
+    {
+      "path": "skills/polars-bio",
+      "files": [
+        "SKILL.md",
+        "references/bioframe_migration.md",
+        "references/configuration.md",
+        "references/file_io.md",
+        "references/interval_operations.md",
+        "references/pileup_operations.md",
+        "references/sql_processing.md"
+      ]
+    },
+    {
+      "path": "skills/pufferlib",
+      "files": [
+        "SKILL.md",
+        "references/environments.md",
+        "references/integration.md",
+        "references/policies.md",
+        "references/training.md",
+        "references/vectorization.md"
+      ]
+    },
+    {
+      "path": "skills/pydeseq2",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/workflow_guide.md"
+      ]
+    },
+    {
+      "path": "skills/pydicom",
+      "files": [
+        "SKILL.md",
+        "references/common_tags.md",
+        "references/transfer_syntaxes.md"
+      ]
+    },
+    {
+      "path": "skills/pyhealth",
+      "files": [
+        "SKILL.md",
+        "references/datasets.md",
+        "references/examples.md",
+        "references/installation.md",
+        "references/medcode.md",
+        "references/models.md",
+        "references/tasks.md"
+      ]
+    },
+    {
+      "path": "skills/pymatgen",
+      "files": [
+        "SKILL.md",
+        "references/analysis_modules.md",
+        "references/core_classes.md",
+        "references/io_formats.md",
+        "references/materials_project_api.md",
+        "references/transformations_workflows.md"
+      ]
+    },
+    {
+      "path": "skills/pymc",
+      "files": [
+        "SKILL.md",
+        "references/distributions.md",
+        "references/sampling_inference.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/pymoo",
+      "files": [
+        "SKILL.md",
+        "references/algorithms.md",
+        "references/constraints_mcdm.md",
+        "references/operators.md",
+        "references/problems.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/pyopenms",
+      "files": [
+        "SKILL.md",
+        "references/data_structures.md",
+        "references/feature_detection.md",
+        "references/file_io.md",
+        "references/identification.md",
+        "references/metabolomics.md",
+        "references/signal_processing.md"
+      ]
+    },
+    {
+      "path": "skills/pysam",
+      "files": [
+        "SKILL.md",
+        "references/alignment_files.md",
+        "references/common_workflows.md",
+        "references/sequence_files.md",
+        "references/variant_files.md"
+      ]
+    },
+    {
+      "path": "skills/pytdc",
+      "files": [
+        "SKILL.md",
+        "references/datasets.md",
+        "references/oracles.md",
+        "references/utilities.md"
+      ]
+    },
+    {
+      "path": "skills/pytorch-lightning",
+      "files": [
+        "SKILL.md",
+        "references/best_practices.md",
+        "references/callbacks.md",
+        "references/data_module.md",
+        "references/distributed_training.md",
+        "references/lightning_module.md",
+        "references/logging.md",
+        "references/trainer.md"
+      ]
+    },
+    {
+      "path": "skills/pyzotero",
+      "files": [
+        "SKILL.md",
+        "references/authentication.md",
+        "references/cli.md",
+        "references/collections.md",
+        "references/error-handling.md",
+        "references/exports.md",
+        "references/files-attachments.md",
+        "references/full-text.md",
+        "references/pagination.md",
+        "references/read-api.md",
+        "references/saved-searches.md",
+        "references/search-params.md",
+        "references/tags.md",
+        "references/write-api.md"
+      ]
+    },
+    {
+      "path": "skills/qiskit",
+      "files": [
+        "SKILL.md",
+        "references/algorithms.md",
+        "references/backends.md",
+        "references/circuits.md",
+        "references/patterns.md",
+        "references/primitives.md",
+        "references/setup.md",
+        "references/transpilation.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/qutip",
+      "files": [
+        "SKILL.md",
+        "references/advanced.md",
+        "references/analysis.md",
+        "references/core_concepts.md",
+        "references/time_evolution.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/rdkit",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/descriptors_reference.md",
+        "references/smarts_patterns.md"
+      ]
+    },
+    {
+      "path": "skills/rowan",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/scanpy",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md",
+        "references/plotting_guide.md",
+        "references/standard_workflow.md"
+      ]
+    },
+    {
+      "path": "skills/scikit-bio",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md"
+      ]
+    },
+    {
+      "path": "skills/scikit-learn",
+      "files": [
+        "SKILL.md",
+        "references/model_evaluation.md",
+        "references/pipelines_and_composition.md",
+        "references/preprocessing.md",
+        "references/quick_reference.md",
+        "references/supervised_learning.md",
+        "references/unsupervised_learning.md"
+      ]
+    },
+    {
+      "path": "skills/scikit-survival",
+      "files": [
+        "SKILL.md",
+        "references/competing-risks.md",
+        "references/cox-models.md",
+        "references/data-handling.md",
+        "references/ensemble-models.md",
+        "references/evaluation-metrics.md",
+        "references/svm-models.md"
+      ]
+    },
+    {
+      "path": "skills/scvelo",
+      "files": [
+        "SKILL.md",
+        "references/velocity_models.md"
+      ]
+    },
+    {
+      "path": "skills/scvi-tools",
+      "files": [
+        "SKILL.md",
+        "references/differential-expression.md",
+        "references/models-atac-seq.md",
+        "references/models-multimodal.md",
+        "references/models-scrna-seq.md",
+        "references/models-spatial.md",
+        "references/models-specialized.md",
+        "references/theoretical-foundations.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/seaborn",
+      "files": [
+        "SKILL.md",
+        "references/examples.md",
+        "references/function_reference.md",
+        "references/objects_interface.md"
+      ]
+    },
+    {
+      "path": "skills/shap",
+      "files": [
+        "SKILL.md",
+        "references/explainers.md",
+        "references/plots.md",
+        "references/theory.md",
+        "references/workflows.md"
+      ]
+    },
+    {
+      "path": "skills/simpy",
+      "files": [
+        "SKILL.md",
+        "references/events.md",
+        "references/monitoring.md",
+        "references/process-interaction.md",
+        "references/real-time.md",
+        "references/resources.md"
+      ]
+    },
+    {
+      "path": "skills/stable-baselines3",
+      "files": [
+        "SKILL.md",
+        "references/algorithms.md",
+        "references/callbacks.md",
+        "references/custom_environments.md",
+        "references/vectorized_envs.md"
+      ]
+    },
+    {
+      "path": "skills/statistical-analysis",
+      "files": [
+        "SKILL.md",
+        "references/assumptions_and_diagnostics.md",
+        "references/bayesian_statistics.md",
+        "references/effect_sizes_and_power.md",
+        "references/reporting_standards.md",
+        "references/test_selection_guide.md"
+      ]
+    },
+    {
+      "path": "skills/statsmodels",
+      "files": [
+        "SKILL.md",
+        "references/discrete_choice.md",
+        "references/glm.md",
+        "references/linear_models.md",
+        "references/stats_diagnostics.md",
+        "references/time_series.md"
+      ]
+    },
+    {
+      "path": "skills/sympy",
+      "files": [
+        "SKILL.md",
+        "references/advanced-topics.md",
+        "references/code-generation-printing.md",
+        "references/core-capabilities.md",
+        "references/matrices-linear-algebra.md",
+        "references/physics-mechanics.md"
+      ]
+    },
+    {
+      "path": "skills/tiledbvcf",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/timesfm-forecasting",
+      "files": [
+        "SKILL.md",
+        "examples/README.md",
+        "examples/anomaly-detection/output/anomaly_detection.json",
+        "examples/anomaly-detection/output/anomaly_detection.png",
+        "examples/covariates-forecasting/output/covariates_data.png",
+        "examples/covariates-forecasting/output/covariates_metadata.json",
+        "examples/covariates-forecasting/output/sales_with_covariates.csv",
+        "examples/global-temperature/README.md",
+        "examples/global-temperature/output/animation_data.json",
+        "examples/global-temperature/output/forecast_animation.gif",
+        "examples/global-temperature/output/forecast_output.csv",
+        "examples/global-temperature/output/forecast_output.json",
+        "examples/global-temperature/output/forecast_visualization.png",
+        "examples/global-temperature/output/interactive_forecast.html",
+        "examples/global-temperature/temperature_anomaly.csv",
+        "references/api_reference.md",
+        "references/data_preparation.md",
+        "references/system_requirements.md"
+      ]
+    },
+    {
+      "path": "skills/torch-geometric",
+      "files": [
+        "SKILL.md",
+        "references/custom_datasets.md",
+        "references/explainability.md",
+        "references/heterogeneous.md",
+        "references/link_prediction.md",
+        "references/message_passing.md",
+        "references/scaling.md"
+      ]
+    },
+    {
+      "path": "skills/torchdrug",
+      "files": [
+        "SKILL.md",
+        "references/core_concepts.md",
+        "references/datasets.md",
+        "references/knowledge_graphs.md",
+        "references/models_architectures.md",
+        "references/molecular_generation.md",
+        "references/molecular_property_prediction.md",
+        "references/protein_modeling.md",
+        "references/retrosynthesis.md"
+      ]
+    },
+    {
+      "path": "skills/transformers",
+      "files": [
+        "SKILL.md",
+        "references/generation.md",
+        "references/models.md",
+        "references/pipelines.md",
+        "references/tokenizers.md",
+        "references/training.md"
+      ]
+    },
+    {
+      "path": "skills/umap-learn",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md"
+      ]
+    },
+    {
+      "path": "skills/vaex",
+      "files": [
+        "SKILL.md",
+        "references/core_dataframes.md",
+        "references/data_processing.md",
+        "references/io_operations.md",
+        "references/machine_learning.md",
+        "references/performance.md",
+        "references/visualization.md"
+      ]
+    },
+    {
+      "path": "skills/zarr-python",
+      "files": [
+        "SKILL.md",
+        "references/api_reference.md"
+      ]
     }
   ]
 }

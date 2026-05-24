@@ -7,28 +7,76 @@
   "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
   "skills": [
     {
-      "path": "skills/adaptyv"
+      "path": "skills/adaptyv",
+      "files": [
+        "SKILL.md",
+        "references/api-endpoints.md"
+      ]
     },
     {
-      "path": "skills/bgpt-paper-search"
+      "path": "skills/bgpt-paper-search",
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
-      "path": "skills/exa-search"
+      "path": "skills/exa-search",
+      "files": [
+        "SKILL.md",
+        "references/web-extract.md",
+        "references/web-search.md"
+      ]
     },
     {
-      "path": "skills/imaging-data-commons"
+      "path": "skills/imaging-data-commons",
+      "files": [
+        "SKILL.md",
+        "references/bigquery_guide.md",
+        "references/cli_guide.md",
+        "references/clinical_data_guide.md",
+        "references/cloud_storage_guide.md",
+        "references/dicomweb_guide.md",
+        "references/digital_pathology_guide.md",
+        "references/index_tables_guide.md",
+        "references/parquet_access_guide.md",
+        "references/sql_patterns.md",
+        "references/use_cases.md"
+      ]
     },
     {
-      "path": "skills/paper-lookup"
+      "path": "skills/paper-lookup",
+      "files": [
+        "SKILL.md",
+        "references/arxiv.md",
+        "references/biorxiv.md",
+        "references/core.md",
+        "references/crossref.md",
+        "references/medrxiv.md",
+        "references/openalex.md",
+        "references/pmc.md",
+        "references/pubmed.md",
+        "references/semantic-scholar.md",
+        "references/unpaywall.md"
+      ]
     },
     {
-      "path": "skills/paperzilla"
+      "path": "skills/paperzilla",
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
-      "path": "skills/primekg"
+      "path": "skills/primekg",
+      "files": [
+        "SKILL.md"
+      ]
     },
     {
-      "path": "skills/research-lookup"
+      "path": "skills/research-lookup",
+      "files": [
+        "README.md",
+        "SKILL.md"
+      ]
     }
   ]
 }
