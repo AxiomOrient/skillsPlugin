@@ -36,6 +36,7 @@ The previous copied Codex/development-process skills were removed because AMA is
 - [Scientific all plugin install AMA QA](docs/scientific-all-plugin-install-ama-qa.md)
 - [GitHub plugin management](docs/github-plugin-management.md)
 - [AMA mobile skill conversion rulebook](docs/ama-mobile-skill-conversion-rulebook.md)
+- [AMA skill change and conversion rulebook](docs/ama-skill-change-rulebook.md)
 - [Scientific literature AMA QA](docs/scientific-literature-ama-qa.md)
 - [Scientific reference AMA QA](docs/scientific-reference-ama-qa.md)
 - [Scientific data lookup AMA QA](docs/scientific-data-lookup-ama-qa.md)
@@ -84,7 +85,14 @@ cd tools/ama_scientific_all_plugin_smoke
 swift run AMAScientificAllPluginSmoke
 ```
 
-It installs 11 scientific plugin packs, loads 142 skills, checks that no scientific plugin ships executable helper files, verifies the removed `pdf` skill stays absent, and proves Python/MATLAB requests route to remote preflight or Swift native substitutes instead of local scripts.
+It installs all 15 plugin packs and loads 150 skills. It also checks the 11 scientific plugin packs, verifies 142 scientific skills load, confirms no scientific plugin ships executable helper files, verifies the removed `pdf` skill stays absent, and proves Python/MATLAB requests route to remote preflight or Swift native substitutes instead of local scripts.
+
+For a live GitHub root install/uninstall proof after publishing:
+
+```sh
+cd tools/ama_scientific_all_plugin_smoke
+swift run AMAScientificAllPluginSmoke --live-github
+```
 
 ## GitHub Install
 
@@ -96,7 +104,7 @@ let installed = try await library.installSkillPlugins(
 )
 ```
 
-The repository root is indexed by `ama-skill-repository.json`, so AMA can manage the 11 scientific category packs as one source without scanning unrelated repository files. Installing the root URL currently installs 11 scientific plugin packs and 142 skills.
+The repository root is indexed by `ama-skill-repository.json`, so AMA can manage all public category packs as one source without scanning unrelated repository files. Installing the root URL currently installs 15 plugin packs and 150 skills. The scientific subset is 11 plugin packs and 142 skills.
 
 It can also install one category pack at a time, for example:
 

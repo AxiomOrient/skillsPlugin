@@ -8,13 +8,14 @@ The current scientific plugin restructuring is the right direction for AMA.
 
 Evidence:
 
-- `ama-skill-repository.json` declares 11 scientific category plugin packs and 142 total skills.
+- `ama-skill-repository.json` declares 15 category plugin packs and 150 total skills.
+- The scientific subset remains 11 category plugin packs and 142 skills.
 - Every scientific category pack has its own `ama-skill-plugin.json`.
 - Manifest skill counts match actual `skills/*/SKILL.md` directories.
 - The plugin tree contains no `.py`, `.sh`, `.ps1`, `.bat`, `.js`, `.ts`, `.swift`, `.m`, `.r`, `.R`, `.pdf`, or `.PDF` files.
-- Live GitHub root install/uninstall smoke succeeded for `https://github.com/AxiomOrient/skillsPlugin`: 11 installs, 142 plugin skills, 11 removals, 0 remaining plugins.
+- Live GitHub root install/uninstall smoke should cover `https://github.com/AxiomOrient/skillsPlugin`: 15 installs, 150 plugin skills, 15 removals, 0 remaining plugins.
 
-The main design choice is sound: root GitHub URL is a catalog install source, while each category plugin remains the real install/uninstall unit. This gives users group install/delete without turning 142 skills into one unmanageable pack.
+The main design choice is sound: root GitHub URL is a catalog install source, while each category plugin remains the real install/uninstall unit. This gives users group install/delete without turning 150 skills into one unmanageable pack.
 
 ## Non-Negotiable Rules
 
@@ -202,4 +203,3 @@ Reject or defer when:
 - The skill cannot truthfully explain its mobile limitations.
 - The category would mix unrelated install/delete concerns.
 - The conversion removes so much context that the skill becomes empty or misleading.
-

@@ -283,6 +283,32 @@ struct AMAScientificAllPluginSmoke {
         if !executableFiles.isEmpty {
             print("scientific_executable_or_script_file_list=\(executableFiles.joined(separator: ","))")
         }
+        if CommandLine.arguments.contains("--live-github") {
+            try await runLiveGitHubInstallSmoke()
+        }
+    }
+
+    private static func runLiveGitHubInstallSmoke() async throws {
+        let root = URL(fileURLWithPath: "/tmp/ama-skillsplugin-live-github-smoke-\(UUID().uuidString)", isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: root)
+        }
+        let library = AMASkillLibrary(
+            workspace: .init(
+                supportRootURL: root.appendingPathComponent("Support", isDirectory: true),
+                userSkillsRootURL: root.appendingPathComponent("Documents/Skills", isDirectory: true)
+            )
+        )
+        let source = "https://github.com/AxiomOrient/skillsPlugin"
+        let installations = try await library.installSkillPlugins(fromRemoteRepositoryURL: source)
+        let installedSkillCount = installations.flatMap(\.installedSkills).count
+        let removed = try await library.uninstallSkillPlugins(fromRemoteRepositoryURL: source)
+        let remaining = try await library.installedSkillPlugins().count
+        print("live_github_source=\(source)")
+        print("live_github_installations=\(installations.count)")
+        print("live_github_plugin_skills=\(installedSkillCount)")
+        print("live_github_removed=\(removed.count)")
+        print("live_github_final_plugins=\(remaining)")
     }
 
     private static func scanExecutableOrScriptFiles(under roots: [URL]) throws -> [String] {

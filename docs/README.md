@@ -5,6 +5,7 @@ This directory documents how AMA mobile skill plugins are designed, converted, i
 ## Core Rules
 
 - [AMA mobile skill conversion rulebook](ama-mobile-skill-conversion-rulebook.md): final review verdict, non-negotiable conversion rules, route selection, and validation gates.
+- [AMA skill change and conversion rulebook](ama-skill-change-rulebook.md): final structure review, change workflow, conversion routes, category rules, and verification gates.
 - [Rulebook](rulebook.md): mandatory repository-wide rules for mobile-first AMA skills.
 - [Plugin pack structure](plugin-pack-structure.md): category pack layout, plugin manifests, and repository catalog structure.
 - [Conversion guide](conversion-guide.md): how to convert desktop/Codex/Claude-style skills into AMA-safe mobile skills.
@@ -39,4 +40,3 @@ This directory documents how AMA mobile skill plugins are designed, converted, i
 - [Scientific compute remote AMA QA](scientific-compute-remote-ama-qa.md)
 - [Scientific mobile preflight AMA QA](scientific-mobile-preflight-ama-qa.md)
 - [Scientific local execution AMA QA](scientific-local-execution-ama-qa.md)
-

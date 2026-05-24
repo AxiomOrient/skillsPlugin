@@ -3,10 +3,28 @@
   "id": "io.axiomorient.ama.skills.repository",
   "name": "AxiomOrient AMA Skills Plugin Repository",
   "version": "0.1.0",
-  "description": "Installable AMA mobile skill plugin packs. The scientific packs are organized as category plugins for group install, update, and uninstall.",
+  "description": "Installable AMA mobile skill plugin packs organized as category plugins for group install, update, and uninstall.",
   "homepage": "https://github.com/AxiomOrient/skillsPlugin",
   "pluginsRoot": "plugins",
   "plugins": [
+    {
+      "id": "io.axiomorient.ama.akasha.engineering-control",
+      "path": "plugins/engineering-control",
+      "category": "akasha",
+      "skillCount": 1
+    },
+    {
+      "id": "io.axiomorient.ama.akasha.intake-routing",
+      "path": "plugins/intake-routing",
+      "category": "akasha",
+      "skillCount": 3
+    },
+    {
+      "id": "io.axiomorient.ama.akasha.safety-trust",
+      "path": "plugins/safety-trust",
+      "category": "akasha",
+      "skillCount": 2
+    },
     {
       "id": "io.axiomorient.ama.scientific.clinical.compliance",
       "path": "plugins/scientific-clinical-compliance",
@@ -72,6 +90,12 @@
       "path": "plugins/scientific-web-research",
       "category": "scientific",
       "skillCount": 8
+    },
+    {
+      "id": "io.axiomorient.ama.akasha.writing-continuity",
+      "path": "plugins/writing-continuity",
+      "category": "akasha",
+      "skillCount": 2
     }
   ]
 }

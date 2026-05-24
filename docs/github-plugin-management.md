@@ -11,7 +11,7 @@ The user-facing install input can be either:
 - Repository root: `https://github.com/AxiomOrient/skillsPlugin`
 - Specific plugin pack: `https://github.com/AxiomOrient/skillsPlugin/tree/main/plugins/scientific-documents`
 
-The repository root path installs the packs declared in `ama-skill-repository.json`, including the 11 scientific category packs. A specific plugin tree path installs only that pack.
+The repository root path installs the packs declared in `ama-skill-repository.json`, currently 15 public category packs. A specific plugin tree path installs only that pack.
 
 ## Research Basis
 
@@ -58,9 +58,18 @@ Uninstall flow:
 2. Find installed plugin records whose `sourceLocation` matches that repository or a `#plugins/...` child.
 3. Remove all matched plugin skill directories and selection state through `uninstallSkillPlugin(id:)`.
 
-## Scientific Pack Management
+## Repository Pack Management
 
-The root repository currently declares 11 scientific plugin packs in `ama-skill-repository.json`:
+The root repository currently declares 15 plugin packs in `ama-skill-repository.json`:
+
+```text
+engineering-control: 1
+intake-routing: 3
+safety-trust: 2
+writing-continuity: 2
+```
+
+Scientific subset:
 
 ```text
 scientific-clinical-compliance: 4
@@ -76,7 +85,7 @@ scientific-visual-artifacts: 9
 scientific-web-research: 8
 ```
 
-Total scientific installed skills: 142.
+Total root install: 15 plugin packs and 150 skills. Total scientific subset: 11 plugin packs and 142 skills.
 
 This gives the app three management levels:
 
@@ -143,11 +152,16 @@ akasha_security_verdict=BLOCK
 
 Live GitHub root install smoke:
 
+```sh
+cd /Users/axient/repoAgent/skillsPlugin/tools/ama_scientific_all_plugin_smoke
+swift run AMAScientificAllPluginSmoke --live-github
+```
+
 ```text
-source=https://github.com/AxiomOrient/skillsPlugin
-live_github_installations=11
-live_github_plugin_skills=142
-live_github_removed=11
+live_github_source=https://github.com/AxiomOrient/skillsPlugin
+live_github_installations=15
+live_github_plugin_skills=150
+live_github_removed=15
 live_github_final_plugins=0
 ```
 
