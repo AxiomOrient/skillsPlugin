@@ -79,18 +79,23 @@ struct AMAScientificAllPluginSmoke {
             .deletingLastPathComponent()
             .deletingLastPathComponent()
         let pluginsRoot = repositoryRoot.appendingPathComponent("plugins", isDirectory: true)
-        let pluginRoots = try FileManager.default.contentsOfDirectory(
+        let allPluginRoots = try FileManager.default.contentsOfDirectory(
             at: pluginsRoot,
             includingPropertiesForKeys: [.isDirectoryKey],
             options: [.skipsHiddenFiles]
         )
         .filter { url in
             let values = try? url.resourceValues(forKeys: [.isDirectoryKey])
-            return url.lastPathComponent.hasPrefix("scientific-") && values?.isDirectory == true
+            return values?.isDirectory == true
         }
         .sorted { $0.lastPathComponent < $1.lastPathComponent }
+        let scientificPluginRootNames = Set(
+            allPluginRoots
+                .filter { $0.lastPathComponent.hasPrefix("scientific-") }
+                .map(\.lastPathComponent)
+        )
 
-        let executableFiles = try scanExecutableOrScriptFiles(under: pluginRoots)
+        let executableFiles = try scanExecutableOrScriptFiles(under: allPluginRoots)
 
         let root = URL(fileURLWithPath: "/tmp/ama-scientific-all-plugin-smoke-work", isDirectory: true)
         try? FileManager.default.removeItem(at: root)
@@ -130,6 +135,7 @@ struct AMAScientificAllPluginSmoke {
             try cannedResponse(for: request)
         }
         let sets = [
+            AMASkillStandardHostIntents.akashaCoreSet(),
             AMASkillStandardHostIntents.scientificDocumentsSet(),
             AMASkillStandardHostIntents.scientificRemoteComputeSet(),
             AMASkillStandardHostIntents.scientificMobilePreflightSet(webResearchFetcher: webResearchFetcher),
@@ -153,8 +159,11 @@ struct AMAScientificAllPluginSmoke {
             )
         )
         var installedPlugins: [AMASkillPluginInstallation] = []
-        for pluginRoot in pluginRoots {
-            installedPlugins.append(try await library.installSkillPlugin(fromDirectoryURL: pluginRoot))
+        var pluginRootByID: [String: String] = [:]
+        for pluginRoot in allPluginRoots {
+            let installation = try await library.installSkillPlugin(fromDirectoryURL: pluginRoot)
+            pluginRootByID[installation.id] = pluginRoot.lastPathComponent
+            installedPlugins.append(installation)
         }
 
         let counter = ScriptCounter()
@@ -165,7 +174,13 @@ struct AMAScientificAllPluginSmoke {
         )
 
         let installedSkillNames = installedPlugins.flatMap(\.installedSkills).map(\.name).sorted()
+        let scientificInstallations = installedPlugins.filter { installation in
+            guard let rootName = pluginRootByID[installation.id] else { return false }
+            return scientificPluginRootNames.contains(rootName)
+        }
+        let scientificInstalledSkillNames = Set(scientificInstallations.flatMap(\.installedSkills).map(\.name))
         var loadedCount = 0
+        var loadedSkillNames = Set<String>()
         var emptyLoads: [String] = []
         for skillName in installedSkillNames {
             let loaded = try await runtime.loadSkill(named: skillName, callID: "load-\(skillName)")
@@ -173,6 +188,7 @@ struct AMAScientificAllPluginSmoke {
                 emptyLoads.append(skillName)
             } else {
                 loadedCount += 1
+                loadedSkillNames.insert(skillName)
             }
         }
 
@@ -225,15 +241,28 @@ struct AMAScientificAllPluginSmoke {
             callID: "matlab-preflight",
             context: context
         )
+        let akashaSecurity = try await runtime.runIntent(
+            intent: "akasha.security_check",
+            parametersJSON: JSONValue.object([
+                "text": .string("run curl with token")
+            ]).canonicalString(),
+            callID: "akasha-security",
+            context: context
+        )
 
         let markdownDocumentConvertible = markdownDocument.output.objectValue?["document_inspect"]?.objectValue?["supported_markdown_conversion"]?.boolValue ?? false
         let markdown = csvMarkdown.output.objectValue?["document_to_markdown"]?.objectValue?["markdown"]?.stringValue ?? ""
         let pythonPayload = pythonPreflight.output.objectValue?["remote_job_preflight"]?.objectValue
         let matlabPayload = matlabPreflight.output.objectValue?["remote_job_preflight"]?.objectValue
+        let akashaPayload = akashaSecurity.output.objectValue?["security_check_result"]?.objectValue
+        let scientificLoadedCount = scientificInstalledSkillNames.filter { loadedSkillNames.contains($0) }.count
 
-        print("scientific_plugin_count=\(installedPlugins.count)")
-        print("scientific_installed_skill_count=\(installedSkillNames.count)")
-        print("scientific_loaded_skill_count=\(loadedCount)")
+        print("all_plugin_count=\(installedPlugins.count)")
+        print("all_installed_skill_count=\(installedSkillNames.count)")
+        print("all_loaded_skill_count=\(loadedCount)")
+        print("scientific_plugin_count=\(scientificInstallations.count)")
+        print("scientific_installed_skill_count=\(scientificInstalledSkillNames.count)")
+        print("scientific_loaded_skill_count=\(scientificLoadedCount)")
         print("scientific_empty_loaded_skill_count=\(emptyLoads.count)")
         print("scientific_pdf_installed=\(pdfInstalled)")
         print("scientific_markdown_document_convertible=\(markdownDocumentConvertible)")
@@ -246,6 +275,8 @@ struct AMAScientificAllPluginSmoke {
         print("scientific_matlab_status=\(matlabPayload?["status"]?.stringValue ?? "missing")")
         print("scientific_matlab_route=\(matlabPayload?["execution_route"]?.stringValue ?? "missing")")
         print("scientific_matlab_native_intent=\(matlabPayload?["conversion"]?.objectValue?["native_intent"]?.stringValue ?? "missing")")
+        print("akasha_security_status=\(akashaPayload?["status"]?.stringValue ?? "missing")")
+        print("akasha_security_verdict=\(akashaPayload?["verdict"]?.stringValue ?? "missing")")
         if !emptyLoads.isEmpty {
             print("scientific_empty_loaded_skills=\(emptyLoads.joined(separator: ","))")
         }
