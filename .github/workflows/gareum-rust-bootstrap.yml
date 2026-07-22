@@ -1,0 +1,102 @@
+name: Gareum Rust bootstrap
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.gareum-ci/**'
+      - '.github/workflows/gareum-rust-bootstrap.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reconstruct canonical source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/gareum"
+          cat .gareum-ci/source.part-* | base64 --decode > "$RUNNER_TEMP/gareum-source.tar.xz"
+          echo 'e18a753333a2ed3ee7a5b2eb88860c575438dd7b688fa508eca33a2c4d3587f8  '"$RUNNER_TEMP/gareum-source.tar.xz" | sha256sum -c -
+          tar -xJf "$RUNNER_TEMP/gareum-source.tar.xz" -C "$RUNNER_TEMP/gareum"
+
+      - name: Install Rust 1.88
+        shell: bash
+        run: |
+          set -euo pipefail
+          rustup toolchain install 1.88.0 --profile minimal --component rustfmt,clippy
+          rustup override set 1.88.0
+        working-directory: ${{ runner.temp }}/gareum
+
+      - name: Generate lockfile and format
+        shell: bash
+        run: |
+          set -euo pipefail
+          cargo generate-lockfile
+          cargo fmt --all
+        working-directory: ${{ runner.temp }}/gareum
+
+      - name: Cargo check
+        id: check
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          cargo check --locked --all-targets --all-features 2>&1 | tee "$RUNNER_TEMP/cargo-check.log"
+        working-directory: ${{ runner.temp }}/gareum
+
+      - name: Cargo clippy
+        id: clippy
+        if: steps.check.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          cargo clippy --locked --all-targets --all-features -- -D warnings 2>&1 | tee "$RUNNER_TEMP/cargo-clippy.log"
+        working-directory: ${{ runner.temp }}/gareum
+
+      - name: Cargo tests
+        id: tests
+        if: steps.check.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          cargo test --workspace --locked 2>&1 | tee "$RUNNER_TEMP/cargo-test.log"
+        working-directory: ${{ runner.temp }}/gareum
+
+      - name: Prepare evidence artifact
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .gareum-ci/output
+          mkdir -p .gareum-ci/output/logs
+          cp -a "$RUNNER_TEMP/gareum" .gareum-ci/output/source
+          cp "$RUNNER_TEMP"/cargo-*.log .gareum-ci/output/logs/ 2>/dev/null || true
+          printf 'check=%s\nclippy=%s\ntests=%s\n' \
+            '${{ steps.check.outcome }}' '${{ steps.clippy.outcome }}' '${{ steps.tests.outcome }}' \
+            > .gareum-ci/output/outcomes.txt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gareum-bootstrap-${{ github.run_id }}
+          path: .gareum-ci/output
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Enforce bootstrap result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test '${{ steps.check.outcome }}' = success
+          test '${{ steps.clippy.outcome }}' = success
+          test '${{ steps.tests.outcome }}' = success
