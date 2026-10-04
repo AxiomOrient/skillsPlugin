@@ -175,3 +175,18 @@ The AMA app should expose:
 - per-pack install/uninstall controls for category packs
 
 For the current repository, entering `https://github.com/AxiomOrient/skillsPlugin` should install the whole pack set. Entering a tree URL under `plugins/` should install only that category.
+
+## Repository-local smoke commands
+
+Run from this repository root:
+
+```sh
+cd tools/ama_scientific_all_plugin_smoke
+swift run AMAScientificAllPluginSmoke
+```
+
+For a live GitHub root install/uninstall proof after publishing, run from the same smoke-tool directory:
+
+```sh
+swift run AMAScientificAllPluginSmoke --live-github
+```
